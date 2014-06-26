@@ -27,6 +27,91 @@ namespace WarhammerFantasyCharGen
             , rTallent4 = ""
             , rTallent5 = ""
             , rTallent6 = "";
+        string[] careers = {"Agitator",
+                                "Apprentice Wizard",
+                                "Bailiff",
+                                "Barber-Surgeon",
+                                "Boatman",
+                                "Bodyguard",
+                                "Bone Picker",
+                                "Bounty Hunter",
+                                "Burgher",
+                                "Camp Follower",
+                                "Charcoal-Burner",
+                                "Coachman",
+                                "Entertainer",
+                                "Envoy",
+                                "Estalian Diestro",
+                                "Ferryman",
+                                "Fieldwarden",
+                                "Fisherman",
+                                "Grave Robber",
+                                "Hedge Wizard",
+                                "Hunter",
+                                "Initiate",
+                                "Jailer",
+                                "Kislevite Kossar",
+                                "Kithband Warrior",
+                                "Marine",
+                                "Mercenary",
+                                "Messenger",
+                                "Militiaman",
+                                "Miner",
+                                "Noble",
+                                "Norse Berserker",
+                                "Outlaw",
+                                "Outrider",
+                                "Peasant",
+                                "Pit Fighter",
+                                "Protagonist",
+                                "Rat Catcher",
+                                "Roadwarden",
+                                "Rogue",
+                                "Runebearer",
+                                "Scribe",
+                                "Seaman",
+                                "Servant",
+                                "Shieldbreaker",
+                                "Smuggler",
+                                "Soldier",
+                                "Squire",
+                                "Student",
+                                "Thief",
+                                "Thug",
+                                "Toll Keeper",
+                                "Tomb Robber",
+                                "Traidsman",
+                                "Troll Slayer",
+                                "Vagabond",
+                                "Valet",
+                                "Watchman",
+                                "Woodsman",
+                                "Zealot"};
+
+        string[] hairColors = {"Ash Blond",
+                                   "Corn",
+                                   "Yellow",
+                                   "Copper",
+                                   "Red",
+                                   "Light Brown",
+                                   "Brown",
+                                   "Dark Brown",
+                                   "Black",
+                                   "Blue Black",
+                                   "Silver"};
+
+        string[] eyeColors = {"Pale Grey",
+                                  "Grey Blue",
+                                  "Blue",
+                                  "Green",
+                                  "Copper",
+                                  "Light Brown",
+                                  "Brown",
+                                  "Dark Brown",
+                                  "Purple",
+                                  "Black",
+                                  "Silver",
+                                  "Hazel"};
 
         public WarhammerFantasyCharGen()
         {
@@ -46,6 +131,7 @@ namespace WarhammerFantasyCharGen
 
             //Load race based lists
             loadRace();
+            raceSkills();
             
             //roll stats
             statsRoll();
@@ -98,230 +184,230 @@ namespace WarhammerFantasyCharGen
             {
                 case 0:
                     cbCareer.Items.AddRange(new object[] {
-                    "Agitator",
-                    "Bodyguard",
-                    "Burgher",
-                    "Coachman",
-                    "Entertainer",
-                    "Hunter",
-                    "Jailer",
-                    "Marine",
-                    "Mercenary",
-                    "Militiaman",
-                    "Miner",
-                    "Noble",
-                    "Outlaw",
-                    "Pit Fighter",
-                    "Protogonist",
-                    "Rat Catcher",
-                    "Runebearer",
-                    "Scribe",
-                    "Seaman",
-                    "Servant",
-                    "Shieldbreaker",
-                    "Smuggler",
-                    "Soldier",
-                    "Student",
-                    "Thief",
-                    "Toll Keeper",
-                    "Tomb Robber",
-                    "Traidsman",
-                    "Troll Slayer",
-                    "Watchman"});
+                    careers[0],
+                    careers[5],
+                    careers[8],
+                    careers[11],
+                    careers[12],
+                    careers[20],
+                    careers[22],
+                    careers[25],
+                    careers[26],
+                    careers[28],
+                    careers[29],
+                    careers[30],
+                    careers[32],
+                    careers[35],
+                    careers[36],
+                    careers[37],
+                    careers[40],
+                    careers[41],
+                    careers[42],
+                    careers[43],
+                    careers[44],
+                    careers[45],
+                    careers[46],
+                    careers[48],
+                    careers[49],
+                    careers[51],
+                    careers[52],
+                    careers[53],
+                    careers[54],
+                    careers[57]});
 
                     cbEyeColor.Items.AddRange(new object[] {
-                    "Pale Grey",
-                    "Blue",
-                    "Copper",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Purple"});
+                    eyeColors[0],
+                    eyeColors[2],
+                    eyeColors[4],
+                    eyeColors[5],
+                    eyeColors[6],
+                    eyeColors[7],
+                    eyeColors[8]});
 
                     cbHairColor.Items.AddRange(new object[] {
-                    "Ash Blond",
-                    "Yellow",
-                    "Red",
-                    "Copper",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Blue Black",
-                    "Black"}); 
+                    hairColors[0],
+                    hairColors[2],
+                    hairColors[4],
+                    hairColors[3],
+                    hairColors[5],
+                    hairColors[6],
+                    hairColors[7],
+                    hairColors[9],
+                    hairColors[8]}); 
                     break;
                 case 1:
                     cbEyeColor.Items.AddRange(new object[] {
-                    "Grey Blue",
-                    "Blue",
-                    "Green",
-                    "Copper",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Silver",
-                    "Purple",
-                    "Black"});
+                    eyeColors[1],
+                    eyeColors[2],
+                    eyeColors[3],
+                    eyeColors[4],
+                    eyeColors[5],
+                    eyeColors[6],
+                    eyeColors[7],
+                    eyeColors[10],
+                    eyeColors[8],
+                    eyeColors[9]});
                     
                     cbHairColor.Items.AddRange(new object[] {
-                    "Silver",
-                    "Ash Blond",
-                    "Corn",
-                    "Yellow",
-                    "Copper",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Black"});
+                    hairColors[10],
+                    hairColors[0],
+                    hairColors[1],
+                    hairColors[2],
+                    hairColors[3],
+                    hairColors[5],
+                    hairColors[6],
+                    hairColors[7],
+                    hairColors[8]});
 
                     cbCareer.Items.AddRange(new object[] {
-                    "Apprentice Wizard",
-                    "Entertainer",
-                    "Envoy",
-                    "Hunter",
-                    "Kithband Warrior",
-                    "Mercenary",
-                    "Messenger",
-                    "Outlaw",
-                    "Outrider",
-                    "Rogue",
-                    "Scribe",
-                    "Seaman",
-                    "Student",
-                    "Thief",
-                    "Traidsman",
-                    "Vagabond"});
+                    careers[1],
+                    careers[12],
+                    careers[13],
+                    careers[20],
+                    careers[24],
+                    careers[26],
+                    careers[27],
+                    careers[32],
+                    careers[33],
+                    careers[39],
+                    careers[41],
+                    careers[42],
+                    careers[48],
+                    careers[49],
+                    careers[53],
+                    careers[55]});
                     break;
                 case 2:
                     cbEyeColor.Items.AddRange(new object[] {
-                    "Blue",
-                    "Hazel",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown"});
+                    eyeColors[2],
+                    eyeColors[11],
+                    eyeColors[5],
+                    eyeColors[6],
+                    eyeColors[7]});
                     
                     cbHairColor.Items.AddRange(new object[] {
-                    "Ash Blond",
-                    "Corn",
-                    "Yellow",
-                    "Copper",
-                    "Red",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Black"});
+                    hairColors[0],
+                    hairColors[1],
+                    hairColors[2],
+                    hairColors[3],
+                    hairColors[4],
+                    hairColors[5],
+                    hairColors[6],
+                    hairColors[7],
+                    hairColors[8]});
 
                     cbCareer.Items.AddRange(new object[] {
-                    "Agitator",
-                    "Barber-Surgeon",
-                    "Bone Picker",
-                    "Bounty Hunter",
-                    "Burgher",
-                    "Camp Follower",
-                    "Charcoal-Burner",
-                    "Entertainer",
-                    "Ferryman",
-                    "Fieldwarden",
-                    "Fisherman",
-                    "Grave Robber",
-                    "Hunter",
-                    "Mercenary",
-                    "Messenger",
-                    "Militiaman",
-                    "Outlaw",
-                    "Peasant",
-                    "Rat Catcher",
-                    "Rogue",
-                    "Servant",
-                    "Smuggler",
-                    "Soldier",
-                    "Student",
-                    "Thief",
-                    "Toll Keeper",
-                    "Tomb Robber",
-                    "Traidsman",
-                    "Vagabond",
-                    "Valet",
-                    "Watchman"});
+                    careers[0],
+                    careers[3],
+                    careers[6],
+                    careers[7],
+                    careers[8],
+                    careers[9],
+                    careers[10],
+                    careers[12],
+                    careers[15],
+                    careers[16],
+                    careers[17],
+                    careers[18],
+                    careers[20],
+                    careers[26],
+                    careers[27],
+                    careers[28],
+                    careers[32],
+                    careers[34],
+                    careers[37],
+                    careers[39],
+                    careers[43],
+                    careers[45],
+                    careers[46],
+                    careers[48],
+                    careers[49],
+                    careers[51],
+                    careers[52],
+                    careers[53],
+                    careers[55],
+                    careers[56],
+                    careers[57]});
                     break;
                 case 3:
                     cbEyeColor.Items.AddRange(new object[] {
-                    "Pale Grey",
-                    "Grey Blue",
-                    "Blue",
-                    "Green",
-                    "Copper",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Purple",
-                    "Black"});
+                    eyeColors[0],
+                    eyeColors[1],
+                    eyeColors[2],
+                    eyeColors[3],
+                    eyeColors[4],
+                    eyeColors[5],
+                    eyeColors[6],
+                    eyeColors[7],
+                    eyeColors[8],
+                    eyeColors[9]});
 
                     cbHairColor.Items.AddRange(new object[] {
-                    "Ash Blond",
-                    "Corn",
-                    "Yellow",
-                    "Copper",
-                    "Red",
-                    "Light Brown",
-                    "Brown",
-                    "Dark Brown",
-                    "Black"});
+                    hairColors[0],
+                    hairColors[1],
+                    hairColors[2],
+                    hairColors[3],
+                    hairColors[4],
+                    hairColors[5],
+                    hairColors[6],
+                    hairColors[7],
+                    hairColors[8]});
 
                     cbCareer.Items.AddRange(new object[] {
-                    "Agitator",
-                    "Apprentice Wizard",
-                    "Bailiff",
-                    "Barber-Surgeon",
-                    "Boatman",
-                    "Bodyguard",
-                    "Bone Picker",
-                    "Bounty Hunter",
-                    "Burgher",
-                    "Camp Follower",
-                    "Charcoal-Burner",
-                    "Coachman",
-                    "Entertainer",
-                    "Estalian Diestro",
-                    "Ferryman",
-                    "Fisherman",
-                    "Grave Robber",
-                    "Hedge Wizard",
-                    "Hunter",
-                    "Initiate",
-                    "Jailer",
-                    "Kislevite Kossar",
-                    "Marine",
-                    "Mercenary",
-                    "Messenger",
-                    "Militiaman",
-                    "Miner",
-                    "Noble",
-                    "Norse Berserker",
-                    "Outlaw",
-                    "Outrider",
-                    "Peasant",
-                    "Pit Fighter",
-                    "Protagonist",
-                    "Rat Catcher",
-                    "Roadwarden",
-                    "Rogue",
-                    "Scribe",
-                    "Seaman",
-                    "Servant",
-                    "Smuggler",
-                    "Soldier",
-                    "Squire",
-                    "Student",
-                    "Thief",
-                    "Thug",
-                    "Toll Keeper",
-                    "Tomb Robber",
-                    "Traidsman",
-                    "Vagabond",
-                    "Valet",
-                    "Watchman",
-                    "Woodsman",
-                    "Zealot"});
+                    careers[0],
+                    careers[1],
+                    careers[2],
+                    careers[3],
+                    careers[4],
+                    careers[5],
+                    careers[6],
+                    careers[7],
+                    careers[8],
+                    careers[9],
+                    careers[10],
+                    careers[11],
+                    careers[12],
+                    careers[14],
+                    careers[15],
+                    careers[17],
+                    careers[18],
+                    careers[19],
+                    careers[20],
+                    careers[21],
+                    careers[22],
+                    careers[23],
+                    careers[25],
+                    careers[26],
+                    careers[27],
+                    careers[28],
+                    careers[29],
+                    careers[30],
+                    careers[31],
+                    careers[32],
+                    careers[33],
+                    careers[34],
+                    careers[35],
+                    careers[36],
+                    careers[37],
+                    careers[38],
+                    careers[39],
+                    careers[41],
+                    careers[42],
+                    careers[43],
+                    careers[45],
+                    careers[46],
+                    careers[47],
+                    careers[48],
+                    careers[49],
+                    careers[50],
+                    careers[51],
+                    careers[52],
+                    careers[53],
+                    careers[55],
+                    careers[56],
+                    careers[57],
+                    careers[58],
+                    careers[59]});
                     break;
             }
         }
@@ -1182,155 +1268,95 @@ namespace WarhammerFantasyCharGen
             {
                 if (markRoll >= 1 && markRoll <= 5)
                 {
-                    if (marked == 0)
-                    { markText = "Pox Marks"; }
-                    else
-                    { markText = ", Pox Marks"; }
+                    markText = "Pox Marks";
                 }
                 else if (markRoll >= 6 && markRoll <= 10)
                 {
-                    if (marked == 0)
-                    { markText = "Ruddy Faced"; }
-                    else
-                    { markText = ", Ruddy Faced"; }
+                    markText = "Ruddy Faced";
                 }
                 else if (markRoll >= 11 && markRoll <= 15)
                 {
-                    if (marked == 0)
-                    { markText = "Scar"; }
-                    else
-                    { markText = ", Scar"; }
+                    markText = "Scar";
                 }
                 else if (markRoll >= 16 && markRoll <= 20)
                 {
-                    if (marked == 0)
-                    { markText = "Tattoo"; }
-                    else
-                    { markText = ", Tattoo"; }
+                    markText = "Tattoo";
                 }
                 else if (markRoll >= 21 && markRoll <= 25)
                 {
-                    if (marked == 0)
-                    { markText = "Earring"; }
-                    else
-                    { markText = ", Earring"; }
+                    markText = "Earring";
                 }
                 else if (markRoll >= 26 && markRoll <= 29)
                 {
-                    if (marked == 0)
-                    { markText = "Ragged Ear"; }
-                    else
-                    { markText = ", Ragged Ear"; }
+                    markText = "Ragged Ear";
                 }
                 else if (markRoll >= 30 && markRoll <= 35)
                 {
-                    if (marked == 0)
-                    { markText = "Nose Ring"; }
-                    else
-                    { markText = ", Nose Ring"; }
+                    markText = "Nose Ring";
                 }
                 else if (markRoll >= 36 && markRoll <= 39)
                 {
-                    if (marked == 0)
-                    { markText = "Wart"; }
-                    else
-                    { markText = ", Wart"; }
+                    markText = "Wart";
                 }
                 else if (markRoll >= 40 && markRoll <= 45)
                 {
-                    if (marked == 0)
-                    { markText = "Broken Nose"; }
-                    else
-                    { markText = ", Broken Nose"; }
+                    markText = "Broken Nose";
                 }
                 else if (markRoll >= 46 && markRoll <= 50)
                 {
-                    if (marked == 0)
-                    { markText = "Missing Tooth"; }
-                    else
-                    { markText = ", Missing Tooth"; }
+                    markText = "Missing Tooth";
                 }
                 else if (markRoll >= 51 && markRoll <= 55)
                 {
-                    if (marked == 0)
-                    { markText = "Snaggle Teeth"; }
-                    else
-                    { markText = ", Snaggle Teeth"; }
+                    markText = "Snaggle Teeth";
                 }
                 else if (markRoll >= 56 && markRoll <= 60)
                 {
-                    if (marked == 0)
-                    { markText = "Lazy Eye"; }
-                    else
-                    { markText = ", Lazy Eye"; }
+                    markText = "Lazy Eye";
                 }
                 else if (markRoll >= 61 && markRoll <= 65)
                 {
-                    if (marked == 0)
-                    { markText = "Missing Eyebrow(s)"; }
-                    else
-                    { markText = ", Missing Eyebrow(s)"; }
+                    markText = "Missing Eyebrow(s)";
                 }
                 else if (markRoll >= 66 && markRoll <= 70)
                 {
-                    if (marked == 0)
-                    { markText = "Missing Digit"; }
-                    else
-                    { markText = ", Missing Digit"; }
+                    markText = "Missing Digit";
                 }
                 else if (markRoll >= 71 && markRoll <= 75)
                 {
-                    if (marked == 0)
-                    { markText = "Missing Nail"; }
-                    else
-                    { markText = ", Missing Nail"; }
+                    markText = "Missing Nail";
                 }
                 else if (markRoll >= 76 && markRoll <= 80)
                 {
-                    if (marked == 0)
-                    { markText = "Distinctive Gait"; }
-                    else
-                    { markText = ", Distinctive Gait"; }
+                    markText = "Distinctive Gait";
                 }
                 else if (markRoll >= 81 && markRoll <= 84)
                 {
-                    if (marked == 0)
-                    { markText = "Curious Smell"; }
-                    else
-                    { markText = ", Curious Smell"; }
+                    markText = "Curious Smell";
                 }
                 else if (markRoll >= 85 && markRoll <= 89)
                 {
-                    if (marked == 0)
-                    { markText = "Huge Nose"; }
-                    else
-                    { markText = ", Huge Nose"; }
+                    markText = "Huge Nose";
                 }
                 else if (markRoll >= 90 && markRoll <= 94)
                 {
-                    if (marked == 0)
-                    { markText = "Large Mole"; }
-                    else
-                    { markText = ", Large Mole"; }
+                    markText = "Large Mole";
                 }
                 else if (markRoll >= 95 && markRoll <= 98)
                 {
-                    if (marked == 0)
-                    { markText = "Small Bald Patch"; }
-                    else
-                    { markText = ", Small Bald Patch"; }
+                    markText = "Small Bald Patch";
                 }
                 else if (markRoll >= 99 && markRoll <= 100)
                 {
-                    if (marked == 0)
-                    { markText = "Strange Coloured Eye(s)"; }
-                    else
-                    { markText = ", Strange Coloured Eye(s)"; }
+                    markText = "Strange Coloured Eye(s)";
                 }
             }
 
+            if (marked == 1)
+            { txMarks.Text += ", " + markText; }
+            else
+            { txMarks.Text += markText; }
             marked = 1;
-            txMarks.Text += markText;
         }
 
         public void siblingsRoll()
@@ -1811,9 +1837,297 @@ namespace WarhammerFantasyCharGen
             "wooden cutlery",
             "hand weapon(sword, axe, club, etc.)"});
 
-            
+            libSkills.Items.Clear();
+            libSkills.Items.AddRange(new object[] {
+                rSkill1,
+                rSkill2,
+                rSkill3});
+
+            if (rSkill4 != "")
+            { libSkills.Items.Add(rSkill4); }
+            if (rSkill5 != "")
+            { libSkills.Items.Add(rSkill5); }
+            if (rSkill6 != "")
+            { libSkills.Items.Add(rSkill6); }
+
+            libTalents.Items.Clear();
+            libTalents.Items.AddRange(new object[] {
+                rTallent1,
+                rTallent2});
+
+            if (rTallent3 != "")
+            { libTalents.Items.Add(rTallent3); }
+            if (rTallent4 != "")
+            { libTalents.Items.Add(rTallent4); }
+            if (rTallent5 != "")
+            { libTalents.Items.Add(rTallent5); }
+            if (rTallent6 != "")
+            { libTalents.Items.Add(rTallent6); }
+
+            switch(cbCareer.Text)
+            {
+                case "Agitator":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text="";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (History) or Gossip",
+                        "Academic Knowledge (Law) or Common Knowledge (the Empire)",
+                        "Concealment",
+                        "Charm",
+                        "Perception",
+                        "Read/Write",
+                        "Speak Language (Breaton or Tilean)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Street Fighting",
+                        "Flee!",
+                        "Public Speaking"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jack",
+                        "One set Good Craftsmanship Clothes",
+                        "leaflets for various causes"});
+                    break;
+                case "Apprentice Wizard":
+                    txWeaponSkilAdvance.Text = "";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "15";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text="";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "1";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (Magic)",
+                        "Channelling",
+                        "Magical Sense",
+                        "Perception",
+                        "Read/Write",
+                        "Search",
+                        "Speak Arcane Language (Magick)",
+                        "Speak Language (Clasical)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Aethyric Attunement or Fast Hands",
+                        "Petty Magic (Arcane)",
+                        "Savvy or Very Resilient"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Quarter Staff",
+                        "Printed Book"});
+                    break;
+            }
 
             txGold.Text = Convert.ToString(startingGold + careerGold);
+        }
+
+        private string randomTalent()
+        {
+            var r = new Random();
+            int roll = r.Next(1, 100);
+            string tallent = "";
+            string[] randTallents = { "Acute Hearing",
+                                      "Ambidextrous",
+                                      "Coolheaded",
+                                      "Excelent Vision",
+                                      "Fleet Footed",
+                                      "Hardy",
+                                      "Lightning Reflexes",
+                                      "Luck",
+                                      "Marksman",
+                                      "Mimic",
+                                      "Night Vision",
+                                      "Resistance to Disease",
+                                      "Resistance to Magic",
+                                      "Resistance to Poison",
+                                      "Savvy",
+                                      "Sixth Sense",
+                                      "Strong-minded",
+                                      "Sturdy",
+                                      "Suave",
+                                      "Super Numerate",
+                                      "Very Resilient",
+                                      "Very Strong",
+                                      "Warrior Born"};
+
+            switch (cbRace.SelectedIndex)
+            {
+                case 2:
+                    if (roll >= 1 && roll <= 5)
+                    { tallent = randTallents[1]; }
+                    else if (roll >= 6 && roll <= 10)
+                    { tallent = randTallents[2]; }
+                    else if (roll >= 11 && roll <= 15)
+                    { tallent = randTallents[3]; }
+                    else if (roll >= 16 && roll <= 20)
+                    { tallent = randTallents[4]; }
+                    else if (roll >= 21 && roll <= 25)
+                    { tallent = randTallents[5]; }
+                    else if (roll >= 26 && roll <= 29)
+                    { tallent = randTallents[6]; }
+                    else if (roll >= 30 && roll <= 33)
+                    { tallent = randTallents[7]; }
+                    else if (roll >= 34 && roll <= 38)
+                    { tallent = randTallents[8]; }
+                    else if (roll >= 39 && roll <= 42)
+                    { tallent = randTallents[9]; }
+                    else if (roll >= 43 && roll <= 47)
+                    { tallent = randTallents[10]; }
+                    else if (roll >= 48 && roll <= 51)
+                    { tallent = randTallents[12]; }
+                    else if (roll >= 52 && roll <= 53)
+                    { tallent = randTallents[13]; }
+                    else if (roll >= 54 && roll <= 57)
+                    { tallent = randTallents[14]; }
+                    else if (roll >= 58 && roll <= 62)
+                    { tallent = randTallents[15]; }
+                    else if (roll >= 63 && roll <= 67)
+                    { tallent = randTallents[16]; }
+                    else if (roll >= 68 && roll <= 72)
+                    { tallent = randTallents[17]; }
+                    else if (roll >= 73 && roll <= 77)
+                    { tallent = randTallents[18]; }
+                    else if (roll >= 78 && roll <= 82)
+                    { tallent = randTallents[19]; }
+                    else if (roll >= 83 && roll <= 87)
+                    { tallent = randTallents[20]; }
+                    else if (roll >= 88 && roll <= 91)
+                    { tallent = randTallents[21]; }
+                    else if (roll >= 92 && roll <= 95)
+                    { tallent = randTallents[22]; }
+                    else if (roll >= 96 && roll <= 100)
+                    { tallent = randTallents[23]; }
+                    break;
+                case 3:
+                    if (roll >= 1 && roll <= 4)
+                    { tallent = randTallents[1]; }
+                    else if (roll >= 5 && roll <= 9)
+                    { tallent = randTallents[2]; }
+                    else if (roll >= 10 && roll <= 13)
+                    { tallent = randTallents[3]; }
+                    else if (roll >= 14 && roll <= 18)
+                    { tallent = randTallents[4]; }
+                    else if (roll >= 19 && roll <= 22)
+                    { tallent = randTallents[5]; }
+                    else if (roll >= 23 && roll <= 27)
+                    { tallent = randTallents[6]; }
+                    else if (roll >= 28 && roll <= 31)
+                    { tallent = randTallents[7]; }
+                    else if (roll >= 32 && roll <= 35)
+                    { tallent = randTallents[8]; }
+                    else if (roll >= 36 && roll <= 40)
+                    { tallent = randTallents[9]; }
+                    else if (roll >= 41 && roll <= 44)
+                    { tallent = randTallents[10]; }
+                    else if (roll >= 45 && roll <= 49)
+                    { tallent = randTallents[11]; }
+                    else if (roll >= 50 && roll <= 53)
+                    { tallent = randTallents[12]; }
+                    else if (roll >= 54 && roll <= 57)
+                    { tallent = randTallents[13]; }
+                    else if (roll >= 58 && roll <= 61)
+                    { tallent = randTallents[14]; }
+                    else if (roll >= 62 && roll <= 66)
+                    { tallent = randTallents[15]; }
+                    else if (roll >= 67 && roll <= 71)
+                    { tallent = randTallents[16]; }
+                    else if (roll >= 72 && roll <= 75)
+                    { tallent = randTallents[17]; }
+                    else if (roll >= 76 && roll <= 79)
+                    { tallent = randTallents[18]; }
+                    else if (roll >= 80 && roll <= 83)
+                    { tallent = randTallents[19]; }
+                    else if (roll >= 84 && roll <= 87)
+                    { tallent = randTallents[20]; }
+                    else if (roll >= 88 && roll <= 91)
+                    { tallent = randTallents[21]; }
+                    else if (roll >= 92 && roll <= 95)
+                    { tallent = randTallents[22]; }
+                    else if (roll >= 96 && roll <= 100)
+                    { tallent = randTallents[23]; }
+                    break;
+            }
+
+            return tallent;
+        }
+
+        public void raceSkills()
+        {
+            switch (cbRace.SelectedIndex)
+            {
+                case 0:
+                    rSkill2 = "Common Knowledge (Dwarfs)";
+                    rSkill3 = "Speak Language (Khazalid)";
+                    rSkill4 = "Trade (Miner, Smith, or Stoneworker)";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = "Dwarfcraft";
+                    rTallent2 = "Grudge-born Fury";
+                    rTallent3 = "Night Vision";
+                    rTallent4 = "Resistance to Magic";
+                    rTallent5 = "Stout-hearted";
+                    rTallent6 = "Sturdy";
+                    break;
+                case 1:
+                    rSkill2 = "Common Knowledge (Elves)";
+                    rSkill3 = "Speak Language (Eltharin)";
+                    rSkill4 = "";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = "Aethyric Attunement or Specialist Weapon Group (Longbow)";
+                    rTallent2 = "Coolheaded or Savvy";
+                    rTallent3 = "Excellent Vision";
+                    rTallent4 = "Night Vision";
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+                case 2:
+                    rSkill2 = "Academic Knowledge (Genealogy/Heraldry";
+                    rSkill3 = "Common Knowledge (Halflings)";
+                    rSkill4 = "Gossip";
+                    rSkill5 = "Speak Language (Halfling)";
+                    rSkill6 = "Trade (Cook or Farmer)";
+                    rTallent1 = "Night Vision";
+                    rTallent2 = "Resistance to Chaos";
+                    rTallent3 = "Specialist Weapon Group (Sling)";
+                    rTallent4 = randomTalent();
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+                case 3:
+                    rSkill2 = "Common Knowledge (the Empire)";
+                    rSkill3 = "Gossip";
+                    rSkill4 = "";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = randomTalent();
+                    rTallent2 = randomTalent();
+                    rTallent3 = "";
+                    rTallent4 = "";
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+            }
         }
 
         private void btRerollChar_Click(object sender, EventArgs e)
@@ -1851,68 +2165,17 @@ namespace WarhammerFantasyCharGen
             txMarks.Text = "";
             marked = 0;
 
-            switch (cbRace.SelectedIndex)
-            {
-                case 0:
-                    rSkill2 = "Common Knowledge (Dwarfs)";
-                    rSkill3 = "Speak Language (Khazalid)";
-                    rSkill4 = "Trade (Miner, Smith, or Stoneworker";
-                    rSkill5 = "";
-                    rSkill6 = "";
-                    rTallent1 = "Dwarfcraft";
-                    rTallent2 = "Grudge-born Fury";
-                    rTallent3 = "Night Vision";
-                    rTallent4 = "Resistance to Magic";
-                    rTallent5 = "Stout-hearted";
-                    rTallent6 = "Sturdy";
-                    break;
-                case 1:
-                    rSkill2 = "Common Knowledge (Elves)";
-                    rSkill3 = "Speak Language (Eltharin)";
-                    rSkill4 = "";
-                    rSkill5 = "";
-                    rSkill6 = "";
-                    rTallent1 = "Aethyric Attunement or Specialist Weapon Group (Longbow)";
-                    rTallent2 = "Coolheaded or Savvy";
-                    rTallent3 = "Excellent Vision";
-                    rTallent4 = "Night Vision";
-                    rTallent5 = "";
-                    rTallent6 = "";
-                    break;
-                case 2:
-                    rSkill2 = "Academic Knowledge (Genealogy/Heraldry";
-                    rSkill3 = "Common Knowledge (Halflings)";
-                    rSkill4 = "Gossip";
-                    rSkill5 = "Speak Language (Halfling)";
-                    rSkill6 = "Trade (Cook or Farmer)";
-                    rTallent1 = "Night Vision";
-                    rTallent2 = "Resistance to Chaos";
-                    rTallent3 = "Specialist Weapon Group (Sling)";
-                    rTallent4 = "";
-                    rTallent5 = "";
-                    rTallent6 = "";
-                    break;
-                case 3:
-                    rSkill2 = "";
-                    rSkill3 = "";
-                    rSkill4 = "";
-                    rSkill5 = "";
-                    rSkill6 = "";
-                    rTallent1 = "";
-                    rTallent2 = "";
-                    rTallent3 = "";
-                    rTallent4 = "";
-                    rTallent5 = "";
-                    rTallent6 = "";
-                    break;
-            }
-
             characterGen();
         }
 
         private void cbCareer_SelectedIndexChanged(object sender, EventArgs e)
         {
             careerChanged();
+        }
+
+        private void btCareerRoll_Click(object sender, EventArgs e)
+        {
+            careerRoll();
         }
     }
 }
