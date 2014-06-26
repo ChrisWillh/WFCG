@@ -13,6 +13,20 @@ namespace WarhammerFantasyCharGen
     public partial class WarhammerFantasyCharGen : Form
     {
         int marked = 0;
+        int startingGold = 0;
+        int careerGold = 0;
+        string rSkill1 = "Speak Language (Reikspiel)"
+            , rSkill2 = ""
+            , rSkill3 = ""
+            , rSkill4 = ""
+            , rSkill5 = ""
+            , rSkill6 = ""
+            , rTallent1 = ""
+            , rTallent2 = ""
+            , rTallent3 = ""
+            , rTallent4 = ""
+            , rTallent5 = ""
+            , rTallent6 = "";
 
         public WarhammerFantasyCharGen()
         {
@@ -23,6 +37,13 @@ namespace WarhammerFantasyCharGen
 
         public void characterGen()
         {
+            int elf = 0;
+            var r = new Random();
+
+            if (cbRace.SelectedIndex == 1)
+            { elf = 1; }
+            else { elf = 0; }
+
             //Load race based lists
             loadRace();
             
@@ -45,13 +66,26 @@ namespace WarhammerFantasyCharGen
             heightRoll();
 
             //roll for distinguishing mark
-            markRoll();
+            markRoll(elf);
 
             //Roll for number of siblings
             siblingsRoll();
 
             //roll for age
             ageRoll();
+
+            //roll for star sign
+            signRoll();
+
+            //roll for birthplace
+            birthRoll();
+
+            //Career equipment
+            careerChanged();
+
+            //roll for starting gold
+            startingGold = r.Next(2, 20);
+            txGold.Text = Convert.ToString(startingGold + careerGold);
         }
 
         public void loadRace()
@@ -526,10 +560,212 @@ namespace WarhammerFantasyCharGen
                     { cbCareer.SelectedIndex = 29; }
                     break;
                 case 1:
+                    if (careerPick >= 1 && careerPick <= 7)
+                    { cbCareer.SelectedIndex = 0; }
+                    else if (careerPick >= 8 && careerPick <= 12)
+                    { cbCareer.SelectedIndex = 1; }
+                    else if (careerPick >= 13 && careerPick <= 19)
+                    { cbCareer.SelectedIndex = 2; }
+                    else if (careerPick >= 20 && careerPick <= 27)
+                    { cbCareer.SelectedIndex = 3; }
+                    else if (careerPick >= 28 && careerPick <= 34)
+                    { cbCareer.SelectedIndex = 4; }
+                    else if (careerPick >= 35 && careerPick <= 39)
+                    { cbCareer.SelectedIndex = 5; }
+                    else if (careerPick >= 40 && careerPick <= 45)
+                    { cbCareer.SelectedIndex = 6; }
+                    else if (careerPick >= 46 && careerPick <= 51)
+                    { cbCareer.SelectedIndex = 7; }
+                    else if (careerPick >= 52 && careerPick <= 57)
+                    { cbCareer.SelectedIndex = 8; }
+                    else if (careerPick >= 58 && careerPick <= 63)
+                    { cbCareer.SelectedIndex = 9; }
+                    else if (careerPick >= 64 && careerPick <= 69)
+                    { cbCareer.SelectedIndex = 10; }
+                    else if (careerPick >= 70 && careerPick <= 75)
+                    { cbCareer.SelectedIndex = 11; }
+                    else if (careerPick >= 76 && careerPick <= 80)
+                    { cbCareer.SelectedIndex = 12; }
+                    else if (careerPick >= 81 && careerPick <= 86)
+                    { cbCareer.SelectedIndex = 13; }
+                    else if (careerPick >= 87 && careerPick <= 93)
+                    { cbCareer.SelectedIndex = 14; }
+                    else if (careerPick >= 94 && careerPick <= 100)
+                    { cbCareer.SelectedIndex = 15; }
                     break;
                 case 2:
+                    if (careerPick >= 1 && careerPick <= 3)
+                    { cbCareer.SelectedIndex = 0; }
+                    else if (careerPick == 4)
+                    { cbCareer.SelectedIndex = 1; }
+                    else if (careerPick == 5)
+                    { cbCareer.SelectedIndex = 2; }
+                    else if (careerPick >= 6 && careerPick <= 7)
+                    { cbCareer.SelectedIndex = 3; }
+                    else if (careerPick >= 8 && careerPick <= 9)
+                    { cbCareer.SelectedIndex = 4; }
+                    else if (careerPick >= 10 && careerPick <= 11)
+                    { cbCareer.SelectedIndex = 5; }
+                    else if (careerPick >= 12 && careerPick <= 14)
+                    { cbCareer.SelectedIndex = 6; }
+                    else if (careerPick >= 15&& careerPick <= 17)
+                    { cbCareer.SelectedIndex = 7; }
+                    else if (careerPick == 18)
+                    { cbCareer.SelectedIndex = 8; }
+                    else if (careerPick >= 19&& careerPick <= 22)
+                    { cbCareer.SelectedIndex = 9; }
+                    else if (careerPick == 23)
+                    { cbCareer.SelectedIndex = 10; }
+                    else if (careerPick >= 24&& careerPick <= 26)
+                    { cbCareer.SelectedIndex = 11; }
+                    else if (careerPick >= 27&& careerPick <= 31)
+                    { cbCareer.SelectedIndex = 12; }
+                    else if (careerPick >= 32&& careerPick <= 35)
+                    { cbCareer.SelectedIndex = 13; }
+                    else if (careerPick >= 36&& careerPick <= 40)
+                    { cbCareer.SelectedIndex = 14; }
+                    else if (careerPick >= 41&& careerPick <= 45)
+                    { cbCareer.SelectedIndex = 15; }
+                    else if (careerPick >= 46&& careerPick <= 48)
+                    { cbCareer.SelectedIndex = 16; }
+                    else if (careerPick >= 49&& careerPick <= 54)
+                    { cbCareer.SelectedIndex = 17; }
+                    else if (careerPick == 55)
+                    { cbCareer.SelectedIndex = 18; }
+                    else if (careerPick >= 56&& careerPick <= 60)
+                    { cbCareer.SelectedIndex = 19; }
+                    else if (careerPick >= 61&& careerPick <= 65)
+                    { cbCareer.SelectedIndex = 20; }
+                    else if (careerPick >= 66&& careerPick <= 68)
+                    { cbCareer.SelectedIndex = 21; }
+                    else if (careerPick >= 69&& careerPick <= 70)
+                    { cbCareer.SelectedIndex = 22; }
+                    else if (careerPick >= 71&& careerPick <= 72)
+                    { cbCareer.SelectedIndex = 23; }
+                    else if (careerPick >= 73&& careerPick <= 78)
+                    { cbCareer.SelectedIndex = 24; }
+                    else if (careerPick >= 79&& careerPick <= 80)
+                    { cbCareer.SelectedIndex = 25; }
+                    else if (careerPick >= 81&& careerPick <= 85)
+                    { cbCareer.SelectedIndex = 26; }
+                    else if (careerPick >= 86&& careerPick <= 90)
+                    { cbCareer.SelectedIndex = 27; }
+                    else if (careerPick >= 91&& careerPick <= 94)
+                    { cbCareer.SelectedIndex = 28; }
+                    else if (careerPick >= 95&& careerPick <= 96)
+                    { cbCareer.SelectedIndex = 29; }
+                    else if (careerPick >= 97&& careerPick <= 100)
+                    { cbCareer.SelectedIndex = 30; }
                     break;
                 case 3:
+                    if (careerPick >= 1 && careerPick <= 2)
+                    { cbCareer.SelectedIndex = 0; }
+                    else if (careerPick >= 3 && careerPick <= 4)
+                    { cbCareer.SelectedIndex = 1; }
+                    else if (careerPick == 5)
+                    { cbCareer.SelectedIndex = 2; }
+                    else if (careerPick == 6)
+                    { cbCareer.SelectedIndex = 3; }
+                    else if (careerPick >= 7 && careerPick <= 8)
+                    { cbCareer.SelectedIndex = 4; }
+                    else if (careerPick >= 9 && careerPick <= 10)
+                    { cbCareer.SelectedIndex = 5; }
+                    else if (careerPick >= 11 && careerPick <= 12)
+                    { cbCareer.SelectedIndex = 6; }
+                    else if (careerPick >= 13 && careerPick <= 14)
+                    { cbCareer.SelectedIndex = 7; }
+                    else if (careerPick >= 15 && careerPick <= 16)
+                    { cbCareer.SelectedIndex = 8; }
+                    else if (careerPick >= 17 && careerPick <= 18)
+                    { cbCareer.SelectedIndex = 9; }
+                    else if (careerPick >= 19 && careerPick <= 20)
+                    { cbCareer.SelectedIndex = 10; }
+                    else if (careerPick >= 21 && careerPick <= 22)
+                    { cbCareer.SelectedIndex = 11; }
+                    else if (careerPick >= 22 && careerPick <= 24)
+                    { cbCareer.SelectedIndex = 12; }
+                    else if (careerPick == 25)
+                    { cbCareer.SelectedIndex = 13; }
+                    else if (careerPick == 26)
+                    { cbCareer.SelectedIndex = 14; }
+                    else if (careerPick >= 27 && careerPick <= 28)
+                    { cbCareer.SelectedIndex = 15; }
+                    else if (careerPick >= 29 && careerPick <= 30)
+                    { cbCareer.SelectedIndex = 16; }
+                    else if (careerPick == 31)
+                    { cbCareer.SelectedIndex = 17; }
+                    else if (careerPick >= 32 && careerPick <= 33)
+                    { cbCareer.SelectedIndex = 18; }
+                    else if (careerPick >= 34 && careerPick <= 35)
+                    { cbCareer.SelectedIndex = 19; }
+                    else if (careerPick == 36)
+                    { cbCareer.SelectedIndex = 20; }
+                    else if (careerPick == 37)
+                    { cbCareer.SelectedIndex = 21; }
+                    else if (careerPick >= 38 && careerPick <= 39)
+                    { cbCareer.SelectedIndex = 22; }
+                    else if (careerPick >= 40 && careerPick <= 41)
+                    { cbCareer.SelectedIndex = 23; }
+                    else if (careerPick >= 42 && careerPick <= 43)
+                    { cbCareer.SelectedIndex = 24; }
+                    else if (careerPick >= 44 && careerPick <= 45)
+                    { cbCareer.SelectedIndex = 25; }
+                    else if (careerPick >= 46 && careerPick <= 47)
+                    { cbCareer.SelectedIndex = 26; }
+                    else if (careerPick >= 48 && careerPick <= 49)
+                    { cbCareer.SelectedIndex = 27; }
+                    else if (careerPick == 50)
+                    { cbCareer.SelectedIndex = 28; }
+                    else if (careerPick >= 51 && careerPick <= 52)
+                    { cbCareer.SelectedIndex = 29; }
+                    else if (careerPick >= 53 && careerPick <= 54)
+                    { cbCareer.SelectedIndex = 30; }
+                    else if (careerPick >= 55 && careerPick <= 56)
+                    { cbCareer.SelectedIndex = 31; }
+                    else if (careerPick >= 57 && careerPick <= 58)
+                    { cbCareer.SelectedIndex = 32; }
+                    else if (careerPick >= 59 && careerPick <= 60)
+                    { cbCareer.SelectedIndex = 33; }
+                    else if (careerPick >= 61 && careerPick <= 62)
+                    { cbCareer.SelectedIndex = 34; }
+                    else if (careerPick >= 63 && careerPick <= 64)
+                    { cbCareer.SelectedIndex = 35; }
+                    else if (careerPick >= 65 && careerPick <= 66)
+                    { cbCareer.SelectedIndex = 36; }
+                    else if (careerPick >= 67 && careerPick <= 68)
+                    { cbCareer.SelectedIndex = 37; }
+                    else if (careerPick >= 69 && careerPick <= 70)
+                    { cbCareer.SelectedIndex = 38; }
+                    else if (careerPick >= 71 && careerPick <= 72)
+                    { cbCareer.SelectedIndex = 39; }
+                    else if (careerPick >= 73 && careerPick <= 74)
+                    { cbCareer.SelectedIndex = 40; }
+                    else if (careerPick >= 75 && careerPick <= 76)
+                    { cbCareer.SelectedIndex = 41; }
+                    else if (careerPick >= 77 && careerPick <= 78)
+                    { cbCareer.SelectedIndex = 42; }
+                    else if (careerPick >= 79 && careerPick <= 80)
+                    { cbCareer.SelectedIndex = 43; }
+                    else if (careerPick >= 81 && careerPick <= 82)
+                    { cbCareer.SelectedIndex = 44; }
+                    else if (careerPick >= 83 && careerPick <= 84)
+                    { cbCareer.SelectedIndex = 45; }
+                    else if (careerPick >= 85 && careerPick <= 86)
+                    { cbCareer.SelectedIndex = 46; }
+                    else if (careerPick >= 87 && careerPick <= 88)
+                    { cbCareer.SelectedIndex = 47; }
+                    else if (careerPick >= 89 && careerPick <= 90)
+                    { cbCareer.SelectedIndex = 48; }
+                    else if (careerPick >= 91 && careerPick <= 92)
+                    { cbCareer.SelectedIndex = 49; }
+                    else if (careerPick >= 93 && careerPick <= 94)
+                    { cbCareer.SelectedIndex = 50; }
+                    else if (careerPick >= 95 && careerPick <= 96)
+                    { cbCareer.SelectedIndex = 51; }
+                    else if (careerPick >= 97 && careerPick <= 98)
+                    { cbCareer.SelectedIndex = 52; }
+                    else if (careerPick >= 99 && careerPick <= 100)
+                    { cbCareer.SelectedIndex = 53; }                   
                     break;
             }
         }
@@ -539,56 +775,225 @@ namespace WarhammerFantasyCharGen
             var r = new Random();
             int weightRoll = r.Next(1, 100);
 
-            switch (cbRace.SelectedIndex)
+            if (weightRoll == 1)
             {
-                case 0:
-                    if (weightRoll == 1)
-                    { txWeight.Text = "90"; }
-                    else if (weightRoll >= 2 && weightRoll <= 3)
-                    { txWeight.Text = "95"; }
-                    else if (weightRoll >= 4 && weightRoll <= 5)
-                    { txWeight.Text = "100"; }
-                    else if (weightRoll >= 6 && weightRoll <= 8)
-                    { txWeight.Text = "105"; }
-                    else if (weightRoll >= 9 && weightRoll <= 12)
-                    { txWeight.Text = "110"; }
-                    else if (weightRoll >= 13 && weightRoll <= 17)
-                    { txWeight.Text = "115"; }
-                    else if (weightRoll >= 18 && weightRoll <= 22)
-                    { txWeight.Text = "120"; }
-                    else if (weightRoll >= 23 && weightRoll <= 29)
-                    { txWeight.Text = "125"; }
-                    else if (weightRoll >= 30 && weightRoll <= 37)
-                    { txWeight.Text = "130"; }
-                    else if (weightRoll >= 38 && weightRoll <= 49)
-                    { txWeight.Text = "135"; }
-                    else if (weightRoll >= 50 && weightRoll <= 64)
-                    { txWeight.Text = "140"; }
-                    else if (weightRoll >= 65 && weightRoll <= 71)
-                    { txWeight.Text = "145"; }
-                    else if (weightRoll >= 72 && weightRoll <= 78)
-                    { txWeight.Text = "150"; }
-                    else if (weightRoll >= 79 && weightRoll <= 83)
-                    { txWeight.Text = "155"; }
-                    else if (weightRoll >= 84 && weightRoll <= 88)
-                    { txWeight.Text = "160"; }
-                    else if (weightRoll >= 89 && weightRoll <= 92)
-                    { txWeight.Text = "165"; }
-                    else if (weightRoll >= 93 && weightRoll <= 95)
-                    { txWeight.Text = "170"; }
-                    else if (weightRoll >= 96 && weightRoll <= 97)
-                    { txWeight.Text = "175"; }
-                    else if (weightRoll >= 98 && weightRoll <= 99)
-                    { txWeight.Text = "180"; }
-                    if (weightRoll == 100)
-                    { txWeight.Text = "185"; }
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "90"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "80"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "75"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "105"; }
+            }
+            else if (weightRoll >= 2 && weightRoll <= 3)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "95"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "85"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "75"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "110"; }
+            }
+            else if (weightRoll >= 4 && weightRoll <= 5)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "100"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "90"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "80"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "115"; }
+            }
+            else if (weightRoll >= 6 && weightRoll <= 8)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "105"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "95"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "80"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "120"; }
+            }
+            else if (weightRoll >= 9 && weightRoll <= 12)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "110"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "100"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "85"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "125"; }
+            }
+            else if (weightRoll >= 13 && weightRoll <= 17)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "115"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "105"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "85"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "130"; }
+            }
+            else if (weightRoll >= 18 && weightRoll <= 22)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "120"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "110"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "90"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "135"; }
+            }
+            else if (weightRoll >= 23 && weightRoll <= 29)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "125"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "115"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "90"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "140"; }
+            }
+            else if (weightRoll >= 30 && weightRoll <= 37)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "130"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "120"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "95"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "145"; }
+            }
+            else if (weightRoll >= 38 && weightRoll <= 49)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "135"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "125"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "100"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "150"; }
+            }
+            else if (weightRoll >= 50 && weightRoll <= 64)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "140"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "130"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "100"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "155"; }
+            }
+            else if (weightRoll >= 65 && weightRoll <= 71)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "145"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "135"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "105"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "160"; }
+            }
+            else if (weightRoll >= 72 && weightRoll <= 78)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "150"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "140"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "110"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "165"; }
+            }
+            else if (weightRoll >= 79 && weightRoll <= 83)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "155"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "145"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "115"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "170"; }
+            }
+            else if (weightRoll >= 84 && weightRoll <= 88)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "160"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "150"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "120"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "175"; }
+            }
+            else if (weightRoll >= 89 && weightRoll <= 92)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "165"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "155"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "125"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "180"; }
+            }
+            else if (weightRoll >= 93 && weightRoll <= 95)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "170"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "160"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "130"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "190"; }
+            }
+            else if (weightRoll >= 96 && weightRoll <= 97)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "175"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "165"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "135"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "200"; }
+            }
+            else if (weightRoll >= 98 && weightRoll <= 99)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "180"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "170"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "140"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "210"; }
+            }
+            else if (weightRoll == 100)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { txWeight.Text = "185"; }
+                else if (cbRace.SelectedIndex == 1)
+                { txWeight.Text = "175"; }
+                else if (cbRace.SelectedIndex == 2)
+                { txWeight.Text = "145"; }
+                else if (cbRace.SelectedIndex == 3)
+                { txWeight.Text = "220"; }
             }
         }
 
@@ -597,30 +1002,77 @@ namespace WarhammerFantasyCharGen
             var r = new Random();
             int eyePick = r.Next(1, 10);
 
-            switch (cbRace.SelectedIndex)
+            if (eyePick == 1)
+            { cbEyeColor.SelectedIndex = 0; }
+            else if (eyePick == 2)
+            { cbEyeColor.SelectedIndex = 1; }
+            else if (eyePick == 3)
             {
-                case 0:
-                    if (eyePick == 1)
-                    { cbEyeColor.SelectedIndex = 0; }
-                    else if (eyePick == 2)
-                    { cbEyeColor.SelectedIndex = 1; }
-                    else if (eyePick == 3)
-                    { cbEyeColor.SelectedIndex = 2; }
-                    else if (eyePick >= 4 && eyePick <= 5)
-                    { cbEyeColor.SelectedIndex = 3; }
-                    else if (eyePick >= 6 && eyePick <= 7)
-                    { cbEyeColor.SelectedIndex = 4; }
-                    else if (eyePick >= 8 && eyePick <= 9)
-                    { cbEyeColor.SelectedIndex = 5; }
-                    else if (eyePick == 10)
-                    { cbEyeColor.SelectedIndex = 6; }
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
+                if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 1; }
+                else
+                { cbEyeColor.SelectedIndex = 2; }
+            }
+            else if (eyePick == 4)
+            {
+                if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 2; }
+                else
+                { cbEyeColor.SelectedIndex = 3; }
+            }
+            else if (eyePick == 5)
+            {
+                if(cbRace.SelectedIndex ==0)
+                { cbEyeColor.SelectedIndex = 3; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 2; }
+                else
+                { cbEyeColor.SelectedIndex = 4; }
+            }
+            else if (eyePick >= 6)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { cbEyeColor.SelectedIndex = 4; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 3; }
+                else
+                { cbEyeColor.SelectedIndex = 5; }
+            }
+            else if (eyePick <= 7)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { cbEyeColor.SelectedIndex = 4; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 3; }
+                else
+                { cbEyeColor.SelectedIndex = 6; }
+            }
+            else if (eyePick >= 8)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { cbEyeColor.SelectedIndex = 5; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 4; }
+                else
+                { cbEyeColor.SelectedIndex = 7; }
+            }
+            else if (eyePick <= 9)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { cbEyeColor.SelectedIndex = 5; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 4; }
+                else
+                { cbEyeColor.SelectedIndex = 8; }
+            }
+            else if (eyePick == 10)
+            {
+                if (cbRace.SelectedIndex == 0)
+                { cbEyeColor.SelectedIndex = 6; }
+                else if (cbRace.SelectedIndex == 2)
+                { cbEyeColor.SelectedIndex = 4; }
+                else
+                { cbEyeColor.SelectedIndex = 9; }
             }
         }
 
@@ -629,35 +1081,46 @@ namespace WarhammerFantasyCharGen
             var r = new Random(); 
             int hairPick = r.Next(1, 10);
 
-            switch (cbRace.SelectedIndex)
+            if (hairPick == 1)
+            { cbHairColor.SelectedIndex = 0; }
+            else if (hairPick == 2)
+            { cbHairColor.SelectedIndex = 1; }
+            else if (hairPick == 3)
+            { cbHairColor.SelectedIndex = 2; }
+            else if (hairPick == 4)
             {
-                case 0:
-                    if (hairPick == 1)
-                    { cbHairColor.SelectedIndex = 0; }
-                    else if (hairPick == 2)
-                    { cbHairColor.SelectedIndex = 1; }
-                    else if (hairPick == 3)
-                    { cbHairColor.SelectedIndex = 2; }
-                    else if (hairPick == 4)
-                    { cbHairColor.SelectedIndex = 3; }
-                    else if (hairPick == 5)
-                    { cbHairColor.SelectedIndex = 4; }
-                    else if (hairPick >= 6 && hairPick <= 7)
-                    { cbHairColor.SelectedIndex = 5; }
-                    else if (hairPick == 8)
-                    { cbHairColor.SelectedIndex = 6; }
-                    else if (hairPick == 9)
-                    { cbHairColor.SelectedIndex = 7; }
-                    else if (hairPick == 10)
-                    { cbHairColor.SelectedIndex = 8; }
-                    break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
+                if (cbRace.SelectedIndex == 2)
+                { cbHairColor.SelectedIndex = 2; }
+                else
+                { cbHairColor.SelectedIndex = 3; }
             }
+            else if (hairPick == 5)
+            {
+                if (cbRace.SelectedIndex == 2)
+                { cbHairColor.SelectedIndex = 3; }
+                else
+                { cbHairColor.SelectedIndex = 4; }
+            }
+            else if (hairPick >= 6)
+            {
+                if (cbRace.SelectedIndex == 2)
+                { cbHairColor.SelectedIndex = 4; }
+                else
+                { cbHairColor.SelectedIndex = 5; }
+            }
+            else if (hairPick <= 7)
+            {
+                if (cbRace.SelectedIndex == 3)
+                { cbHairColor.SelectedIndex = 6; }
+                else
+                { cbHairColor.SelectedIndex = 5; }
+            }
+            else if (hairPick >= 8)
+            { cbHairColor.SelectedIndex = 6; }
+            else if (hairPick <= 9)
+            { cbHairColor.SelectedIndex = 7; }
+            else if (hairPick == 10)
+            { cbHairColor.SelectedIndex = 8; }
         }
 
         public void heightRoll()
@@ -709,13 +1172,13 @@ namespace WarhammerFantasyCharGen
 
         }
 
-        public void markRoll()
+        public void markRoll(int elf)
         {
             var r = new Random();
             int markRoll = r.Next(1, 100);
             string markText = "";
 
-            if (cbRace.SelectedIndex != 1)
+            if (elf != 1)
             {
                 if (markRoll >= 1 && markRoll <= 5)
                 {
@@ -1155,6 +1618,204 @@ namespace WarhammerFantasyCharGen
             }
         }
 
+        public void signRoll()
+        {
+            var r = new Random();
+            int signPicker = r.Next(1,100);
+
+            if (signPicker >= 1 && signPicker <= 5)
+            { cbStarSign.SelectedIndex = 0; }
+            else if (signPicker >= 6 && signPicker <= 10)
+            { cbStarSign.SelectedIndex = 1; }
+            else if (signPicker >= 11 && signPicker <= 15)
+            { cbStarSign.SelectedIndex = 2; }
+            else if (signPicker >= 16 && signPicker <= 25)
+            { cbStarSign.SelectedIndex = 3; }
+            else if (signPicker >= 26 && signPicker <= 30)
+            { cbStarSign.SelectedIndex = 4; }
+            else if (signPicker >= 31 && signPicker <= 35)
+            { cbStarSign.SelectedIndex = 5; }
+            else if (signPicker >= 36 && signPicker <= 40)
+            { cbStarSign.SelectedIndex = 6; }
+            else if (signPicker >= 41 && signPicker <= 45)
+            { cbStarSign.SelectedIndex = 7; }
+            else if (signPicker >= 46 && signPicker <= 50)
+            { cbStarSign.SelectedIndex = 8; }
+            else if (signPicker >= 51 && signPicker <= 55)
+            { cbStarSign.SelectedIndex = 9; }
+            else if (signPicker >= 56 && signPicker <= 60)
+            { cbStarSign.SelectedIndex = 10; }
+            else if (signPicker >= 61 && signPicker <= 65)
+            { cbStarSign.SelectedIndex = 11; }
+            else if (signPicker >= 66 && signPicker <= 70)
+            { cbStarSign.SelectedIndex = 12; }
+            else if (signPicker >= 71 && signPicker <= 75)
+            { cbStarSign.SelectedIndex = 13; }
+            else if (signPicker >= 76 && signPicker <= 80)
+            { cbStarSign.SelectedIndex = 14; }
+            else if (signPicker >= 81 && signPicker <= 85)
+            { cbStarSign.SelectedIndex = 15; }
+            else if (signPicker >= 86 && signPicker <= 90)
+            { cbStarSign.SelectedIndex = 16; }
+            else if (signPicker >= 91 && signPicker <= 95)
+            { cbStarSign.SelectedIndex = 17; }
+            else if (signPicker >= 96 && signPicker <= 98)
+            { cbStarSign.SelectedIndex = 18; }
+            else if (signPicker >= 99 && signPicker <= 100)
+            { cbStarSign.SelectedIndex = 19; }
+        }
+
+        public void birthRoll()
+        {
+            var r = new Random();
+            int birthPick = r.Next(1, 100);
+
+            switch (cbRace.SelectedIndex)
+            {
+                case 0:
+                    if (birthPick >= 1 && birthPick <= 30)
+                    { humBirthplace(); }
+                    else if (birthPick >= 31 && birthPick <= 40)
+                    { txBirthplace.Text = "Karak Norn (Grey Mountains)"; }
+                    else if (birthPick >= 41 && birthPick <= 50)
+                    { txBirthplace.Text = "Karak Izor (the Vaults)"; }
+                    else if (birthPick >= 51 && birthPick <= 60)
+                    { txBirthplace.Text = "Karak Hirn (Black Mountains)"; }
+                    else if (birthPick >= 61 && birthPick <= 70)
+                    { txBirthplace.Text = "Karak Kadrin (World's Edge Mountains)"; }
+                    else if (birthPick >= 71 && birthPick <= 80)
+                    { txBirthplace.Text = "Karaz-A-Karak (World's Edge Mountains)"; }
+                    else if (birthPick >= 81 && birthPick <= 90)
+                    { txBirthplace.Text = "Zhufbar (World's Edge Mountains)"; }
+                    else if (birthPick >= 91 && birthPick <= 100)
+                    { txBirthplace.Text = "Barak Varr (the Black Gulf)"; }
+                    break;
+                case 1:
+                    if (birthPick >= 1 && birthPick <= 20)
+                    { txBirthplace.Text = "City of Altdorf"; }
+                    else if (birthPick >= 21 && birthPick <= 40)
+                    { txBirthplace.Text = "City of Marienburg"; }
+                    else if (birthPick >= 41 && birthPick <= 70)
+                    { txBirthplace.Text = "Laurelorn Forest"; }
+                    else if (birthPick >= 71 && birthPick <= 85)
+                    { txBirthplace.Text = "The Great Forest"; }
+                    else if (birthPick >= 86 && birthPick <= 100)
+                    { txBirthplace.Text = "Reikwald Forest"; }
+                    break;
+                case 2:
+                    if (birthPick <= 50)
+                    { txBirthplace.Text = "The Moot"; }
+                    else { humBirthplace(); }
+                    break;
+                case 3:
+                    humBirthplace();
+                    break;
+            }
+        }
+
+        public void humBirthplace()
+        {
+            var r = new Random();
+            int roll1 = r.Next(1, 10);
+            int roll2 = r.Next(1, 10);
+            string part1 = "";
+            string part2 = "";
+
+            if (cbCareer.Text == "Noble")
+            { roll2 = r.Next(1, 4); }
+
+            if (cbCareer.Text == "Norse Berserker")
+            { roll1 = 4; }
+
+            switch (roll1)
+            {
+                case 1:
+                    part1 = "Averland";
+                    break;
+                case 2:
+                    part1 = "Hochland";
+                    break;
+                case 3:
+                    part1 = "Middenland";
+                    break;
+                case 4:
+                    part1 = "Nordland";
+                    break;
+                case 5:
+                    part1 = "Ostermark";
+                    break;
+                case 6:
+                    part1 = "Ostland";
+                    break;
+                case 7:
+                    part1 = "Reikland";
+                    break;
+                case 8:
+                    part1 = "Stirland";
+                    break;
+                case 9:
+                    part1 = "Talabecland";
+                    break;
+                case 10:
+                    part1 = "Wissenland";
+                    break;
+            }
+
+            switch (roll2)
+            {
+                case 1:
+                    part2 = "City";
+                    break;
+                case 2:
+                    part2 = "Prosperous Town";
+                    break;
+                case 3:
+                    part2 = "Market Town";
+                    break;
+                case 4:
+                    part2 = "Fortified Town";
+                    break;
+                case 5:
+                    part2 = "Farming Village";
+                    break;
+                case 6:
+                    part2 = "Poor Village";
+                    break;
+                case 7:
+                    part2 = "Small Settlement";
+                    break;
+                case 8:
+                    part2 = "Pig/Cattle Farm";
+                    break;
+                case 9:
+                    part2 = "Arable Farm";
+                    break;
+                case 10:
+                    part2 = "Hovel";
+                    break;
+            }
+
+            txBirthplace.Text = part1 + ", " + part2;
+        }
+
+        public void careerChanged()
+        {
+            libEquipment.Items.Clear();
+            libEquipment.Items.AddRange(new object[] {
+            "common clothes (shirt, breeches/skirt, worn boots)",
+            "tattered cloak",
+            "dagger",
+            "backpack or slingbag",
+            "blanket",
+            "wooden tankard",
+            "wooden cutlery",
+            "hand weapon(sword, axe, club, etc.)"});
+
+            
+
+            txGold.Text = Convert.ToString(startingGold + careerGold);
+        }
+
         private void btRerollChar_Click(object sender, EventArgs e)
         {
             txMarks.Text = "";
@@ -1169,21 +1830,89 @@ namespace WarhammerFantasyCharGen
 
         private void btAddMark_Click(object sender, EventArgs e)
         {
-            markRoll();
+            markRoll(0);
         }
 
         private void btRerollMark_Click(object sender, EventArgs e)
         {
+            int elf = 0;
+
+            if (cbRace.SelectedIndex == 1)
+            { elf = 1; }
+            else { elf = 0; }
+
             txMarks.Text = "";
             marked = 0;
-            markRoll();
+            markRoll(elf);
         }
 
         private void cbRace_SelectedIndexChanged(object sender, EventArgs e)
         {
             txMarks.Text = "";
             marked = 0;
+
+            switch (cbRace.SelectedIndex)
+            {
+                case 0:
+                    rSkill2 = "Common Knowledge (Dwarfs)";
+                    rSkill3 = "Speak Language (Khazalid)";
+                    rSkill4 = "Trade (Miner, Smith, or Stoneworker";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = "Dwarfcraft";
+                    rTallent2 = "Grudge-born Fury";
+                    rTallent3 = "Night Vision";
+                    rTallent4 = "Resistance to Magic";
+                    rTallent5 = "Stout-hearted";
+                    rTallent6 = "Sturdy";
+                    break;
+                case 1:
+                    rSkill2 = "Common Knowledge (Elves)";
+                    rSkill3 = "Speak Language (Eltharin)";
+                    rSkill4 = "";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = "Aethyric Attunement or Specialist Weapon Group (Longbow)";
+                    rTallent2 = "Coolheaded or Savvy";
+                    rTallent3 = "Excellent Vision";
+                    rTallent4 = "Night Vision";
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+                case 2:
+                    rSkill2 = "Academic Knowledge (Genealogy/Heraldry";
+                    rSkill3 = "Common Knowledge (Halflings)";
+                    rSkill4 = "Gossip";
+                    rSkill5 = "Speak Language (Halfling)";
+                    rSkill6 = "Trade (Cook or Farmer)";
+                    rTallent1 = "Night Vision";
+                    rTallent2 = "Resistance to Chaos";
+                    rTallent3 = "Specialist Weapon Group (Sling)";
+                    rTallent4 = "";
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+                case 3:
+                    rSkill2 = "";
+                    rSkill3 = "";
+                    rSkill4 = "";
+                    rSkill5 = "";
+                    rSkill6 = "";
+                    rTallent1 = "";
+                    rTallent2 = "";
+                    rTallent3 = "";
+                    rTallent4 = "";
+                    rTallent5 = "";
+                    rTallent6 = "";
+                    break;
+            }
+
             characterGen();
+        }
+
+        private void cbCareer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            careerChanged();
         }
     }
 }

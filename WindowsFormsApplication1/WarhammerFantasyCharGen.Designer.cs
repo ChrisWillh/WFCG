@@ -31,10 +31,8 @@
             this.gbCharacter = new System.Windows.Forms.GroupBox();
             this.btRerollStats = new System.Windows.Forms.Button();
             this.btRerollChar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.libPreCareers = new System.Windows.Forms.ListBox();
             this.cbCareer = new System.Windows.Forms.ComboBox();
             this.cbRace = new System.Windows.Forms.ComboBox();
             this.txName = new System.Windows.Forms.TextBox();
@@ -63,19 +61,9 @@
             this.cbEyeColor = new System.Windows.Forms.ComboBox();
             this.txAge = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txStrBonusCurrent = new System.Windows.Forms.TextBox();
-            this.txToughBonusCurrent = new System.Windows.Forms.TextBox();
-            this.txAttacksCurrent = new System.Windows.Forms.TextBox();
-            this.txWoundsCurrent = new System.Windows.Forms.TextBox();
-            this.txInsanityCurrent = new System.Windows.Forms.TextBox();
-            this.txFateCurrent = new System.Windows.Forms.TextBox();
-            this.txMoveCurrent = new System.Windows.Forms.TextBox();
-            this.txMagicCurrent = new System.Windows.Forms.TextBox();
             this.txAttacksStart = new System.Windows.Forms.TextBox();
             this.txWoundsStart = new System.Windows.Forms.TextBox();
             this.txStrBonusStart = new System.Windows.Forms.TextBox();
@@ -84,14 +72,6 @@
             this.txMagicStart = new System.Windows.Forms.TextBox();
             this.txInsanityStart = new System.Windows.Forms.TextBox();
             this.txFateStart = new System.Windows.Forms.TextBox();
-            this.txAttacksAdvance = new System.Windows.Forms.TextBox();
-            this.txWoundsAdvance = new System.Windows.Forms.TextBox();
-            this.txStrBonusAdvance = new System.Windows.Forms.TextBox();
-            this.txToughBonusAdvance = new System.Windows.Forms.TextBox();
-            this.txMoveAdvance = new System.Windows.Forms.TextBox();
-            this.txMagicAdvance = new System.Windows.Forms.TextBox();
-            this.txInsanityAdvance = new System.Windows.Forms.TextBox();
-            this.txFateAdvance = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -109,20 +89,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txFellowCurrent = new System.Windows.Forms.TextBox();
-            this.txWillCurrent = new System.Windows.Forms.TextBox();
-            this.txIntCurrent = new System.Windows.Forms.TextBox();
-            this.txAgilityCurrent = new System.Windows.Forms.TextBox();
-            this.txToughnesCurrent = new System.Windows.Forms.TextBox();
-            this.txStrentghCurrent = new System.Windows.Forms.TextBox();
-            this.txBalisticSkilCurrent = new System.Windows.Forms.TextBox();
-            this.txFellowAdvance = new System.Windows.Forms.TextBox();
-            this.txWillAdvance = new System.Windows.Forms.TextBox();
-            this.txIntAdvance = new System.Windows.Forms.TextBox();
-            this.txAgilityAdvance = new System.Windows.Forms.TextBox();
-            this.txToughnesAdvance = new System.Windows.Forms.TextBox();
-            this.txStrentghAdvance = new System.Windows.Forms.TextBox();
-            this.txBalisticSkilAdvance = new System.Windows.Forms.TextBox();
             this.txFellowStart = new System.Windows.Forms.TextBox();
             this.txWillStart = new System.Windows.Forms.TextBox();
             this.txIntStart = new System.Windows.Forms.TextBox();
@@ -131,41 +97,64 @@
             this.txStrentghStart = new System.Windows.Forms.TextBox();
             this.txBalisticSkilStart = new System.Windows.Forms.TextBox();
             this.txWeaponSkilStart = new System.Windows.Forms.TextBox();
-            this.txWeaponSkilAdvance = new System.Windows.Forms.TextBox();
-            this.txWeaponSkilCurrent = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.libEquipment = new System.Windows.Forms.ListBox();
+            this.txInsanityAdvance = new System.Windows.Forms.TextBox();
+            this.txMagicAdvance = new System.Windows.Forms.TextBox();
+            this.txMoveAdvance = new System.Windows.Forms.TextBox();
+            this.txToughBonusAdvance = new System.Windows.Forms.TextBox();
+            this.txStrBonusAdvance = new System.Windows.Forms.TextBox();
+            this.txWoundsAdvance = new System.Windows.Forms.TextBox();
+            this.txAttacksAdvance = new System.Windows.Forms.TextBox();
+            this.txFateAdvance = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txStrentghAdvance = new System.Windows.Forms.TextBox();
+            this.txToughnesAdvance = new System.Windows.Forms.TextBox();
+            this.txAgilityAdvance = new System.Windows.Forms.TextBox();
+            this.txIntAdvance = new System.Windows.Forms.TextBox();
+            this.txWillAdvance = new System.Windows.Forms.TextBox();
+            this.txFellowAdvance = new System.Windows.Forms.TextBox();
+            this.txBalisticSkilAdvance = new System.Windows.Forms.TextBox();
+            this.txWeaponSkilAdvance = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txGold = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.libSkills = new System.Windows.Forms.ListBox();
+            this.libTalents = new System.Windows.Forms.ListBox();
             this.gbCharacter.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbCharacter
             // 
             this.gbCharacter.Controls.Add(this.btRerollStats);
             this.gbCharacter.Controls.Add(this.btRerollChar);
-            this.gbCharacter.Controls.Add(this.label4);
             this.gbCharacter.Controls.Add(this.label3);
             this.gbCharacter.Controls.Add(this.label2);
-            this.gbCharacter.Controls.Add(this.libPreCareers);
             this.gbCharacter.Controls.Add(this.cbCareer);
             this.gbCharacter.Controls.Add(this.cbRace);
             this.gbCharacter.Controls.Add(this.txName);
             this.gbCharacter.Controls.Add(this.label1);
             this.gbCharacter.Location = new System.Drawing.Point(13, 13);
             this.gbCharacter.Name = "gbCharacter";
-            this.gbCharacter.Size = new System.Drawing.Size(324, 204);
+            this.gbCharacter.Size = new System.Drawing.Size(324, 131);
             this.gbCharacter.TabIndex = 1;
             this.gbCharacter.TabStop = false;
             this.gbCharacter.Text = "Character";
             // 
             // btRerollStats
             // 
-            this.btRerollStats.Location = new System.Drawing.Point(13, 157);
+            this.btRerollStats.Location = new System.Drawing.Point(240, 102);
             this.btRerollStats.Name = "btRerollStats";
             this.btRerollStats.Size = new System.Drawing.Size(75, 23);
             this.btRerollStats.TabIndex = 6;
@@ -175,22 +164,13 @@
             // 
             // btRerollChar
             // 
-            this.btRerollChar.Location = new System.Drawing.Point(13, 127);
+            this.btRerollChar.Location = new System.Drawing.Point(10, 102);
             this.btRerollChar.Name = "btRerollChar";
             this.btRerollChar.Size = new System.Drawing.Size(75, 23);
             this.btRerollChar.TabIndex = 5;
             this.btRerollChar.Text = "Reroll Char";
             this.btRerollChar.UseVisualStyleBackColor = true;
             this.btRerollChar.Click += new System.EventHandler(this.btRerollChar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 102);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Previous Careers:";
             // 
             // label3
             // 
@@ -209,14 +189,6 @@
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Race:";
-            // 
-            // libPreCareers
-            // 
-            this.libPreCareers.FormattingEnabled = true;
-            this.libPreCareers.Location = new System.Drawing.Point(103, 102);
-            this.libPreCareers.Name = "libPreCareers";
-            this.libPreCareers.Size = new System.Drawing.Size(213, 95);
-            this.libPreCareers.TabIndex = 4;
             // 
             // cbCareer
             // 
@@ -286,6 +258,7 @@
             this.cbCareer.Size = new System.Drawing.Size(226, 21);
             this.cbCareer.TabIndex = 3;
             this.cbCareer.Text = "Agitator";
+            this.cbCareer.SelectedIndexChanged += new System.EventHandler(this.cbCareer_SelectedIndexChanged);
             // 
             // cbRace
             // 
@@ -342,7 +315,7 @@
             this.groupBox1.Controls.Add(this.cbHairColor);
             this.groupBox1.Controls.Add(this.cbEyeColor);
             this.groupBox1.Controls.Add(this.txAge);
-            this.groupBox1.Location = new System.Drawing.Point(13, 224);
+            this.groupBox1.Location = new System.Drawing.Point(13, 150);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(324, 197);
             this.groupBox1.TabIndex = 2;
@@ -581,7 +554,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label27);
             this.groupBox2.Controls.Add(this.label28);
             this.groupBox2.Controls.Add(this.label25);
@@ -603,39 +575,20 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(13, 427);
+            this.groupBox2.Location = new System.Drawing.Point(13, 353);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 219);
+            this.groupBox2.Size = new System.Drawing.Size(324, 173);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Character Profile";
             // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(26, 188);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(41, 13);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "Current";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(17, 163);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(50, 13);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "Advance";
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(24, 138);
+            this.label28.Location = new System.Drawing.Point(24, 116);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(43, 13);
             this.label28.TabIndex = 23;
@@ -644,7 +597,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(10, 119);
+            this.label25.Location = new System.Drawing.Point(10, 97);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 22;
@@ -661,14 +614,6 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel2.Controls.Add(this.txStrBonusCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txToughBonusCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txAttacksCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txWoundsCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txInsanityCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txFateCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txMoveCurrent, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txMagicCurrent, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txAttacksStart, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txWoundsStart, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txStrBonusStart, 2, 0);
@@ -685,71 +630,14 @@
             this.tableLayoutPanel2.Controls.Add(this.txMagicAdvance, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.txInsanityAdvance, 6, 1);
             this.tableLayoutPanel2.Controls.Add(this.txFateAdvance, 7, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(73, 135);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(73, 113);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(243, 77);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(243, 52);
             this.tableLayoutPanel2.TabIndex = 21;
-            // 
-            // txStrBonusCurrent
-            // 
-            this.txStrBonusCurrent.Location = new System.Drawing.Point(63, 53);
-            this.txStrBonusCurrent.Name = "txStrBonusCurrent";
-            this.txStrBonusCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txStrBonusCurrent.TabIndex = 19;
-            // 
-            // txToughBonusCurrent
-            // 
-            this.txToughBonusCurrent.Location = new System.Drawing.Point(93, 53);
-            this.txToughBonusCurrent.Name = "txToughBonusCurrent";
-            this.txToughBonusCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txToughBonusCurrent.TabIndex = 20;
-            // 
-            // txAttacksCurrent
-            // 
-            this.txAttacksCurrent.Location = new System.Drawing.Point(3, 53);
-            this.txAttacksCurrent.Name = "txAttacksCurrent";
-            this.txAttacksCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txAttacksCurrent.TabIndex = 17;
-            // 
-            // txWoundsCurrent
-            // 
-            this.txWoundsCurrent.Location = new System.Drawing.Point(33, 53);
-            this.txWoundsCurrent.Name = "txWoundsCurrent";
-            this.txWoundsCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txWoundsCurrent.TabIndex = 18;
-            // 
-            // txInsanityCurrent
-            // 
-            this.txInsanityCurrent.Location = new System.Drawing.Point(183, 53);
-            this.txInsanityCurrent.Name = "txInsanityCurrent";
-            this.txInsanityCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txInsanityCurrent.TabIndex = 23;
-            // 
-            // txFateCurrent
-            // 
-            this.txFateCurrent.Location = new System.Drawing.Point(213, 53);
-            this.txFateCurrent.Name = "txFateCurrent";
-            this.txFateCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txFateCurrent.TabIndex = 24;
-            // 
-            // txMoveCurrent
-            // 
-            this.txMoveCurrent.Location = new System.Drawing.Point(123, 53);
-            this.txMoveCurrent.Name = "txMoveCurrent";
-            this.txMoveCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txMoveCurrent.TabIndex = 21;
-            // 
-            // txMagicCurrent
-            // 
-            this.txMagicCurrent.Location = new System.Drawing.Point(153, 53);
-            this.txMagicCurrent.Name = "txMagicCurrent";
-            this.txMagicCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txMagicCurrent.TabIndex = 22;
             // 
             // txAttacksStart
             // 
@@ -810,66 +698,10 @@
             this.txFateStart.Size = new System.Drawing.Size(24, 20);
             this.txFateStart.TabIndex = 8;
             // 
-            // txAttacksAdvance
-            // 
-            this.txAttacksAdvance.Location = new System.Drawing.Point(3, 28);
-            this.txAttacksAdvance.Name = "txAttacksAdvance";
-            this.txAttacksAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txAttacksAdvance.TabIndex = 9;
-            // 
-            // txWoundsAdvance
-            // 
-            this.txWoundsAdvance.Location = new System.Drawing.Point(33, 28);
-            this.txWoundsAdvance.Name = "txWoundsAdvance";
-            this.txWoundsAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txWoundsAdvance.TabIndex = 10;
-            // 
-            // txStrBonusAdvance
-            // 
-            this.txStrBonusAdvance.Location = new System.Drawing.Point(63, 28);
-            this.txStrBonusAdvance.Name = "txStrBonusAdvance";
-            this.txStrBonusAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txStrBonusAdvance.TabIndex = 11;
-            // 
-            // txToughBonusAdvance
-            // 
-            this.txToughBonusAdvance.Location = new System.Drawing.Point(93, 28);
-            this.txToughBonusAdvance.Name = "txToughBonusAdvance";
-            this.txToughBonusAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txToughBonusAdvance.TabIndex = 12;
-            // 
-            // txMoveAdvance
-            // 
-            this.txMoveAdvance.Location = new System.Drawing.Point(123, 28);
-            this.txMoveAdvance.Name = "txMoveAdvance";
-            this.txMoveAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txMoveAdvance.TabIndex = 13;
-            // 
-            // txMagicAdvance
-            // 
-            this.txMagicAdvance.Location = new System.Drawing.Point(153, 28);
-            this.txMagicAdvance.Name = "txMagicAdvance";
-            this.txMagicAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txMagicAdvance.TabIndex = 14;
-            // 
-            // txInsanityAdvance
-            // 
-            this.txInsanityAdvance.Location = new System.Drawing.Point(183, 28);
-            this.txInsanityAdvance.Name = "txInsanityAdvance";
-            this.txInsanityAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txInsanityAdvance.TabIndex = 15;
-            // 
-            // txFateAdvance
-            // 
-            this.txFateAdvance.Location = new System.Drawing.Point(213, 28);
-            this.txFateAdvance.Name = "txFateAdvance";
-            this.txFateAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txFateAdvance.TabIndex = 16;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(286, 119);
+            this.label24.Location = new System.Drawing.Point(286, 97);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(20, 13);
             this.label24.TabIndex = 20;
@@ -878,7 +710,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(256, 119);
+            this.label23.Location = new System.Drawing.Point(256, 97);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(17, 13);
             this.label23.TabIndex = 19;
@@ -887,7 +719,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(223, 119);
+            this.label22.Location = new System.Drawing.Point(223, 97);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(28, 13);
             this.label22.TabIndex = 18;
@@ -896,7 +728,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(196, 119);
+            this.label21.Location = new System.Drawing.Point(196, 97);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(16, 13);
             this.label21.TabIndex = 17;
@@ -905,7 +737,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(169, 119);
+            this.label20.Location = new System.Drawing.Point(169, 97);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(21, 13);
             this.label20.TabIndex = 16;
@@ -914,7 +746,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(136, 119);
+            this.label19.Location = new System.Drawing.Point(136, 97);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(21, 13);
             this.label19.TabIndex = 15;
@@ -923,7 +755,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(106, 119);
+            this.label18.Location = new System.Drawing.Point(106, 97);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(18, 13);
             this.label18.TabIndex = 14;
@@ -932,7 +764,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(76, 119);
+            this.label17.Location = new System.Drawing.Point(76, 97);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(14, 13);
             this.label17.TabIndex = 13;
@@ -1021,13 +853,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Controls.Add(this.txFellowCurrent, 7, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txWillCurrent, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txIntCurrent, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txAgilityCurrent, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txToughnesCurrent, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txStrentghCurrent, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.txBalisticSkilCurrent, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txFellowAdvance, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.txWillAdvance, 6, 1);
             this.tableLayoutPanel1.Controls.Add(this.txIntAdvance, 5, 1);
@@ -1044,113 +869,13 @@
             this.tableLayoutPanel1.Controls.Add(this.txBalisticSkilStart, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txWeaponSkilStart, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txWeaponSkilAdvance, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txWeaponSkilCurrent, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(73, 37);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(243, 75);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(243, 53);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // txFellowCurrent
-            // 
-            this.txFellowCurrent.Location = new System.Drawing.Point(213, 53);
-            this.txFellowCurrent.Name = "txFellowCurrent";
-            this.txFellowCurrent.Size = new System.Drawing.Size(26, 20);
-            this.txFellowCurrent.TabIndex = 23;
-            // 
-            // txWillCurrent
-            // 
-            this.txWillCurrent.Location = new System.Drawing.Point(183, 53);
-            this.txWillCurrent.Name = "txWillCurrent";
-            this.txWillCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txWillCurrent.TabIndex = 22;
-            // 
-            // txIntCurrent
-            // 
-            this.txIntCurrent.Location = new System.Drawing.Point(153, 53);
-            this.txIntCurrent.Name = "txIntCurrent";
-            this.txIntCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txIntCurrent.TabIndex = 21;
-            // 
-            // txAgilityCurrent
-            // 
-            this.txAgilityCurrent.Location = new System.Drawing.Point(123, 53);
-            this.txAgilityCurrent.Name = "txAgilityCurrent";
-            this.txAgilityCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txAgilityCurrent.TabIndex = 20;
-            // 
-            // txToughnesCurrent
-            // 
-            this.txToughnesCurrent.Location = new System.Drawing.Point(93, 53);
-            this.txToughnesCurrent.Name = "txToughnesCurrent";
-            this.txToughnesCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txToughnesCurrent.TabIndex = 19;
-            // 
-            // txStrentghCurrent
-            // 
-            this.txStrentghCurrent.Location = new System.Drawing.Point(63, 53);
-            this.txStrentghCurrent.Name = "txStrentghCurrent";
-            this.txStrentghCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txStrentghCurrent.TabIndex = 18;
-            // 
-            // txBalisticSkilCurrent
-            // 
-            this.txBalisticSkilCurrent.Location = new System.Drawing.Point(33, 53);
-            this.txBalisticSkilCurrent.Name = "txBalisticSkilCurrent";
-            this.txBalisticSkilCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txBalisticSkilCurrent.TabIndex = 17;
-            // 
-            // txFellowAdvance
-            // 
-            this.txFellowAdvance.Location = new System.Drawing.Point(213, 28);
-            this.txFellowAdvance.Name = "txFellowAdvance";
-            this.txFellowAdvance.Size = new System.Drawing.Size(26, 20);
-            this.txFellowAdvance.TabIndex = 15;
-            // 
-            // txWillAdvance
-            // 
-            this.txWillAdvance.Location = new System.Drawing.Point(183, 28);
-            this.txWillAdvance.Name = "txWillAdvance";
-            this.txWillAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txWillAdvance.TabIndex = 14;
-            // 
-            // txIntAdvance
-            // 
-            this.txIntAdvance.Location = new System.Drawing.Point(153, 28);
-            this.txIntAdvance.Name = "txIntAdvance";
-            this.txIntAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txIntAdvance.TabIndex = 13;
-            // 
-            // txAgilityAdvance
-            // 
-            this.txAgilityAdvance.Location = new System.Drawing.Point(123, 28);
-            this.txAgilityAdvance.Name = "txAgilityAdvance";
-            this.txAgilityAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txAgilityAdvance.TabIndex = 12;
-            // 
-            // txToughnesAdvance
-            // 
-            this.txToughnesAdvance.Location = new System.Drawing.Point(93, 28);
-            this.txToughnesAdvance.Name = "txToughnesAdvance";
-            this.txToughnesAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txToughnesAdvance.TabIndex = 11;
-            // 
-            // txStrentghAdvance
-            // 
-            this.txStrentghAdvance.Location = new System.Drawing.Point(63, 28);
-            this.txStrentghAdvance.Name = "txStrentghAdvance";
-            this.txStrentghAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txStrentghAdvance.TabIndex = 10;
-            // 
-            // txBalisticSkilAdvance
-            // 
-            this.txBalisticSkilAdvance.Location = new System.Drawing.Point(33, 28);
-            this.txBalisticSkilAdvance.Name = "txBalisticSkilAdvance";
-            this.txBalisticSkilAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txBalisticSkilAdvance.TabIndex = 9;
             // 
             // txFellowStart
             // 
@@ -1208,38 +933,6 @@
             this.txWeaponSkilStart.Size = new System.Drawing.Size(24, 20);
             this.txWeaponSkilStart.TabIndex = 0;
             // 
-            // txWeaponSkilAdvance
-            // 
-            this.txWeaponSkilAdvance.Location = new System.Drawing.Point(3, 28);
-            this.txWeaponSkilAdvance.Name = "txWeaponSkilAdvance";
-            this.txWeaponSkilAdvance.Size = new System.Drawing.Size(24, 20);
-            this.txWeaponSkilAdvance.TabIndex = 8;
-            // 
-            // txWeaponSkilCurrent
-            // 
-            this.txWeaponSkilCurrent.Location = new System.Drawing.Point(3, 53);
-            this.txWeaponSkilCurrent.Name = "txWeaponSkilCurrent";
-            this.txWeaponSkilCurrent.Size = new System.Drawing.Size(24, 20);
-            this.txWeaponSkilCurrent.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Current";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Advance";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -1258,11 +951,225 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Main";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txGold);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.libEquipment);
+            this.groupBox3.Location = new System.Drawing.Point(343, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(324, 511);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Equipment";
+            // 
+            // libEquipment
+            // 
+            this.libEquipment.FormattingEnabled = true;
+            this.libEquipment.Items.AddRange(new object[] {
+            "common clothes (shirt, breeches/skirt, worn boots)",
+            "tattered cloak",
+            "dagger",
+            "backpack or slingbag",
+            "blanket",
+            "wooden tankard",
+            "wooden cutlery",
+            "hand weapon(sword, axe, club, etc.)"});
+            this.libEquipment.Location = new System.Drawing.Point(7, 20);
+            this.libEquipment.Name = "libEquipment";
+            this.libEquipment.Size = new System.Drawing.Size(309, 459);
+            this.libEquipment.TabIndex = 0;
+            // 
+            // txInsanityAdvance
+            // 
+            this.txInsanityAdvance.Location = new System.Drawing.Point(183, 28);
+            this.txInsanityAdvance.Name = "txInsanityAdvance";
+            this.txInsanityAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txInsanityAdvance.TabIndex = 15;
+            // 
+            // txMagicAdvance
+            // 
+            this.txMagicAdvance.Location = new System.Drawing.Point(153, 28);
+            this.txMagicAdvance.Name = "txMagicAdvance";
+            this.txMagicAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txMagicAdvance.TabIndex = 14;
+            // 
+            // txMoveAdvance
+            // 
+            this.txMoveAdvance.Location = new System.Drawing.Point(123, 28);
+            this.txMoveAdvance.Name = "txMoveAdvance";
+            this.txMoveAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txMoveAdvance.TabIndex = 13;
+            // 
+            // txToughBonusAdvance
+            // 
+            this.txToughBonusAdvance.Location = new System.Drawing.Point(93, 28);
+            this.txToughBonusAdvance.Name = "txToughBonusAdvance";
+            this.txToughBonusAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txToughBonusAdvance.TabIndex = 12;
+            // 
+            // txStrBonusAdvance
+            // 
+            this.txStrBonusAdvance.Location = new System.Drawing.Point(63, 28);
+            this.txStrBonusAdvance.Name = "txStrBonusAdvance";
+            this.txStrBonusAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txStrBonusAdvance.TabIndex = 11;
+            // 
+            // txWoundsAdvance
+            // 
+            this.txWoundsAdvance.Location = new System.Drawing.Point(33, 28);
+            this.txWoundsAdvance.Name = "txWoundsAdvance";
+            this.txWoundsAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txWoundsAdvance.TabIndex = 10;
+            // 
+            // txAttacksAdvance
+            // 
+            this.txAttacksAdvance.Location = new System.Drawing.Point(3, 28);
+            this.txAttacksAdvance.Name = "txAttacksAdvance";
+            this.txAttacksAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txAttacksAdvance.TabIndex = 9;
+            // 
+            // txFateAdvance
+            // 
+            this.txFateAdvance.Location = new System.Drawing.Point(213, 28);
+            this.txFateAdvance.Name = "txFateAdvance";
+            this.txFateAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txFateAdvance.TabIndex = 16;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(17, 141);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(50, 13);
+            this.label27.TabIndex = 24;
+            this.label27.Text = "Advance";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Advance";
+            // 
+            // txStrentghAdvance
+            // 
+            this.txStrentghAdvance.Location = new System.Drawing.Point(63, 28);
+            this.txStrentghAdvance.Name = "txStrentghAdvance";
+            this.txStrentghAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txStrentghAdvance.TabIndex = 10;
+            // 
+            // txToughnesAdvance
+            // 
+            this.txToughnesAdvance.Location = new System.Drawing.Point(93, 28);
+            this.txToughnesAdvance.Name = "txToughnesAdvance";
+            this.txToughnesAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txToughnesAdvance.TabIndex = 11;
+            // 
+            // txAgilityAdvance
+            // 
+            this.txAgilityAdvance.Location = new System.Drawing.Point(123, 28);
+            this.txAgilityAdvance.Name = "txAgilityAdvance";
+            this.txAgilityAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txAgilityAdvance.TabIndex = 12;
+            // 
+            // txIntAdvance
+            // 
+            this.txIntAdvance.Location = new System.Drawing.Point(153, 28);
+            this.txIntAdvance.Name = "txIntAdvance";
+            this.txIntAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txIntAdvance.TabIndex = 13;
+            // 
+            // txWillAdvance
+            // 
+            this.txWillAdvance.Location = new System.Drawing.Point(183, 28);
+            this.txWillAdvance.Name = "txWillAdvance";
+            this.txWillAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txWillAdvance.TabIndex = 14;
+            // 
+            // txFellowAdvance
+            // 
+            this.txFellowAdvance.Location = new System.Drawing.Point(213, 28);
+            this.txFellowAdvance.Name = "txFellowAdvance";
+            this.txFellowAdvance.Size = new System.Drawing.Size(26, 20);
+            this.txFellowAdvance.TabIndex = 15;
+            // 
+            // txBalisticSkilAdvance
+            // 
+            this.txBalisticSkilAdvance.Location = new System.Drawing.Point(33, 28);
+            this.txBalisticSkilAdvance.Name = "txBalisticSkilAdvance";
+            this.txBalisticSkilAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txBalisticSkilAdvance.TabIndex = 9;
+            // 
+            // txWeaponSkilAdvance
+            // 
+            this.txWeaponSkilAdvance.Location = new System.Drawing.Point(3, 28);
+            this.txWeaponSkilAdvance.Name = "txWeaponSkilAdvance";
+            this.txWeaponSkilAdvance.Size = new System.Drawing.Size(24, 20);
+            this.txWeaponSkilAdvance.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 492);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Gold Crowns:";
+            // 
+            // txGold
+            // 
+            this.txGold.Location = new System.Drawing.Point(82, 485);
+            this.txGold.Name = "txGold";
+            this.txGold.Size = new System.Drawing.Size(54, 20);
+            this.txGold.TabIndex = 2;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.libSkills);
+            this.groupBox4.Location = new System.Drawing.Point(674, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(200, 511);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Skills";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.libTalents);
+            this.groupBox5.Location = new System.Drawing.Point(881, 13);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(200, 511);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Talents";
+            // 
+            // libSkills
+            // 
+            this.libSkills.FormattingEnabled = true;
+            this.libSkills.Location = new System.Drawing.Point(6, 20);
+            this.libSkills.Name = "libSkills";
+            this.libSkills.Size = new System.Drawing.Size(188, 485);
+            this.libSkills.TabIndex = 0;
+            // 
+            // libTalents
+            // 
+            this.libTalents.FormattingEnabled = true;
+            this.libTalents.Location = new System.Drawing.Point(7, 20);
+            this.libTalents.Name = "libTalents";
+            this.libTalents.Size = new System.Drawing.Size(187, 485);
+            this.libTalents.TabIndex = 0;
+            // 
             // WarhammerFantasyCharGen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 816);
+            this.ClientSize = new System.Drawing.Size(1229, 536);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCharacter);
@@ -1278,6 +1185,10 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1287,12 +1198,10 @@
         private System.Windows.Forms.GroupBox gbCharacter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox libPreCareers;
         private System.Windows.Forms.ComboBox cbCareer;
         private System.Windows.Forms.ComboBox cbRace;
         private System.Windows.Forms.TextBox txName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label16;
@@ -1304,20 +1213,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox txFellowCurrent;
-        private System.Windows.Forms.TextBox txWillCurrent;
-        private System.Windows.Forms.TextBox txIntCurrent;
-        private System.Windows.Forms.TextBox txAgilityCurrent;
-        private System.Windows.Forms.TextBox txToughnesCurrent;
-        private System.Windows.Forms.TextBox txStrentghCurrent;
-        private System.Windows.Forms.TextBox txBalisticSkilCurrent;
-        private System.Windows.Forms.TextBox txFellowAdvance;
-        private System.Windows.Forms.TextBox txWillAdvance;
-        private System.Windows.Forms.TextBox txIntAdvance;
-        private System.Windows.Forms.TextBox txAgilityAdvance;
-        private System.Windows.Forms.TextBox txToughnesAdvance;
-        private System.Windows.Forms.TextBox txStrentghAdvance;
-        private System.Windows.Forms.TextBox txBalisticSkilAdvance;
         private System.Windows.Forms.TextBox txFellowStart;
         private System.Windows.Forms.TextBox txWillStart;
         private System.Windows.Forms.TextBox txIntStart;
@@ -1326,25 +1221,11 @@
         private System.Windows.Forms.TextBox txStrentghStart;
         private System.Windows.Forms.TextBox txBalisticSkilStart;
         private System.Windows.Forms.TextBox txWeaponSkilStart;
-        private System.Windows.Forms.TextBox txWeaponSkilAdvance;
-        private System.Windows.Forms.TextBox txWeaponSkilCurrent;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txStrBonusCurrent;
-        private System.Windows.Forms.TextBox txToughBonusCurrent;
-        private System.Windows.Forms.TextBox txAttacksCurrent;
-        private System.Windows.Forms.TextBox txWoundsCurrent;
-        private System.Windows.Forms.TextBox txInsanityCurrent;
-        private System.Windows.Forms.TextBox txFateCurrent;
-        private System.Windows.Forms.TextBox txMoveCurrent;
-        private System.Windows.Forms.TextBox txMagicCurrent;
         private System.Windows.Forms.TextBox txAttacksStart;
         private System.Windows.Forms.TextBox txWoundsStart;
         private System.Windows.Forms.TextBox txStrBonusStart;
@@ -1353,14 +1234,6 @@
         private System.Windows.Forms.TextBox txMagicStart;
         private System.Windows.Forms.TextBox txInsanityStart;
         private System.Windows.Forms.TextBox txFateStart;
-        private System.Windows.Forms.TextBox txAttacksAdvance;
-        private System.Windows.Forms.TextBox txWoundsAdvance;
-        private System.Windows.Forms.TextBox txStrBonusAdvance;
-        private System.Windows.Forms.TextBox txToughBonusAdvance;
-        private System.Windows.Forms.TextBox txMoveAdvance;
-        private System.Windows.Forms.TextBox txMagicAdvance;
-        private System.Windows.Forms.TextBox txInsanityAdvance;
-        private System.Windows.Forms.TextBox txFateAdvance;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
@@ -1393,6 +1266,32 @@
         private System.Windows.Forms.Button btRerollMark;
         private System.Windows.Forms.TextBox txBirthplace;
         private System.Windows.Forms.Button btRerollStats;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txAttacksAdvance;
+        private System.Windows.Forms.TextBox txWoundsAdvance;
+        private System.Windows.Forms.TextBox txStrBonusAdvance;
+        private System.Windows.Forms.TextBox txToughBonusAdvance;
+        private System.Windows.Forms.TextBox txMoveAdvance;
+        private System.Windows.Forms.TextBox txMagicAdvance;
+        private System.Windows.Forms.TextBox txInsanityAdvance;
+        private System.Windows.Forms.TextBox txFateAdvance;
+        private System.Windows.Forms.TextBox txFellowAdvance;
+        private System.Windows.Forms.TextBox txWillAdvance;
+        private System.Windows.Forms.TextBox txIntAdvance;
+        private System.Windows.Forms.TextBox txAgilityAdvance;
+        private System.Windows.Forms.TextBox txToughnesAdvance;
+        private System.Windows.Forms.TextBox txStrentghAdvance;
+        private System.Windows.Forms.TextBox txBalisticSkilAdvance;
+        private System.Windows.Forms.TextBox txWeaponSkilAdvance;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListBox libEquipment;
+        private System.Windows.Forms.TextBox txGold;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ListBox libSkills;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ListBox libTalents;
     }
 }
 
