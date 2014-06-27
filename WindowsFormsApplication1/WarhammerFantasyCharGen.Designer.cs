@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbCharacter = new System.Windows.Forms.GroupBox();
+            this.btCareerRoll = new System.Windows.Forms.Button();
             this.btRerollStats = new System.Windows.Forms.Button();
             this.btRerollChar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -125,7 +126,6 @@
             this.libSkills = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.libTalents = new System.Windows.Forms.ListBox();
-            this.btCareerRoll = new System.Windows.Forms.Button();
             this.gbCharacter.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -153,6 +153,16 @@
             this.gbCharacter.TabIndex = 1;
             this.gbCharacter.TabStop = false;
             this.gbCharacter.Text = "Character";
+            // 
+            // btCareerRoll
+            // 
+            this.btCareerRoll.Location = new System.Drawing.Point(66, 102);
+            this.btCareerRoll.Name = "btCareerRoll";
+            this.btCareerRoll.Size = new System.Drawing.Size(87, 23);
+            this.btCareerRoll.TabIndex = 7;
+            this.btCareerRoll.Text = "Reroll Career";
+            this.btCareerRoll.UseVisualStyleBackColor = true;
+            this.btCareerRoll.Click += new System.EventHandler(this.btCareerRoll_Click);
             // 
             // btRerollStats
             // 
@@ -1163,16 +1173,6 @@
             this.libTalents.Name = "libTalents";
             this.libTalents.Size = new System.Drawing.Size(306, 485);
             this.libTalents.TabIndex = 0;
-            // 
-            // btCareerRoll
-            // 
-            this.btCareerRoll.Location = new System.Drawing.Point(66, 102);
-            this.btCareerRoll.Name = "btCareerRoll";
-            this.btCareerRoll.Size = new System.Drawing.Size(87, 23);
-            this.btCareerRoll.TabIndex = 7;
-            this.btCareerRoll.Text = "Reroll Career";
-            this.btCareerRoll.UseVisualStyleBackColor = true;
-            this.btCareerRoll.Click += new System.EventHandler(this.btCareerRoll_Click);
             // 
             // WarhammerFantasyCharGen
             // 
