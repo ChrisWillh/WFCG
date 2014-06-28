@@ -1696,6 +1696,9 @@ namespace WarhammerFantasyCharGen
             var r = new Random();
             int birthPick = r.Next(1, 100);
 
+            if (cbCareer.Text == "Kithband Warrior")
+            { birthPick = r.Next(41, 100); }
+
             switch (cbRace.SelectedIndex)
             {
                 case 0:
@@ -1789,6 +1792,10 @@ namespace WarhammerFantasyCharGen
 
             if (cbCareer.Text == "Estalian Diestro")
             { part1 = "Estalia"; }
+            if (cbCareer.Text == "KisleVite Kossar")
+            { part1 = "Kislev"; }
+            if (cbCareer.Text == "Norse Berserker")
+            { part1 = "Norsca"; }
 
             switch (roll2)
             {
@@ -1829,6 +1836,8 @@ namespace WarhammerFantasyCharGen
 
         public void careerChanged()
         {
+            var r = new Random();
+
             libEquipment.Items.Clear();
             libEquipment.Items.AddRange(new object[] {
             "common clothes (shirt, breeches/skirt, worn boots)",
@@ -2712,6 +2721,1361 @@ namespace WarhammerFantasyCharGen
                     libEquipment.Items.AddRange(new object[]{
                         "Bottle of Common Wine",
                         "Any one of: Bola, Lasso, Net"});
+                    break;
+                case "KisleVite Kossar":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (Kislev)",
+                        "Consume Alcohol",
+                        "Dodge Blow",
+                        "Gamble or Gossip",
+                        "Outdoor Survival",
+                        "Perception",
+                        "Search",
+                        "Speak Language (Kislevian)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Specialist Weapon Group (Two Handed)",
+                        "Strike to Injure"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Bow w/ 10 Arrows",
+                        "Great Weapon (Two-Handed Axe)",
+                        "Mail Coat",
+                        "Leather Jack",
+                        "Leather Leggings"});
+                    break;
+                case "Kithband Warrior":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Concealment",
+                        "Dodge Blow",
+                        "Follow Trail",
+                        "Heal or Search",
+                        "Outdoor Survival",
+                        "Perception",
+                        "Scale Sheer Surface",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Marksman or Rover",
+                        "Rapid Reload or Warrior Born"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Elfbow w/ 10 Arrows",
+                        "Leather Jack"});
+                    break;
+                case "Marine":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "3";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (the Wasteland) or Gamble",
+                        "Consume Alcohol",
+                        "Dodge Blow",
+                        "Gossip or Secret Language (Battle Tongue",
+                        "Intimidate",
+                        "Row",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disaem or Quick Draw",
+                        "Strike Mighty Blow",
+                        "Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Bow or Crossbow /w 10 Arrows or Bolts",
+                        "Leather Jack",
+                        "Shield",
+                        "Grappling Hook",
+                        "10 Yards of Rope"});
+                    break;
+                case "Mercenary":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care or Gamble",
+                        "Common Knowldge (Bretonnia, Kislev, or Tilea)",
+                        "Dodge Blow",
+                        "Drive or Ride",
+                        "Gossip or Haggle",
+                        "Perception or Search",
+                        "Secret Language (Battle Tongue)",
+                        "Speak Language (Tilean) or Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disarm or Quick Draw",
+                        "Rapid Reload or Strike Mighty Blow",
+                        "Sharpshooter or Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Crossbow w/ 10 Bolts",
+                        "Shield",
+                        "Mail Shirt",
+                        "Leather Jack",
+                        "Healing Draught"});
+                    break;
+                case "Messenger":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Common Knowledge (the Empire or the Wasteland)",
+                        "or Gossip",
+                        "Navigation",
+                        "Outdoor Survival",
+                        "Secret Signs (Scout)",
+                        "Perception",
+                        "Ride",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Orientation",
+                        "Seasoned Traveller"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jack",
+                        "Map case",
+                        "Riding Horse w/ Saddle & Harness or Pony for Halfling",
+                        "Shield"});
+                    break;
+                case "Militiaman":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Dodge Blow",
+                        "Drive or Swim",
+                        "Gamble or Gossip",
+                        "Outdoor Survival",
+                        "Perception",
+                        "Search",
+                        "Trade (any one"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Specialist Weapon Group (Two-Handed)",
+                        "or Rapid Reload",
+                        "Strike Mighty Blow"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Halber or Bow w/ 10 Arrows",
+                        "Leather Jack",
+                        "Leather Skullcap",
+                        "Uniform"});
+                    break;
+                case "Miner":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Concealment or Drive",
+                        "Evaluate or Outdoor Survival",
+                        "Navigation",
+                        "Perception",
+                        "Scale Sheer Surface",
+                        "Trade (Miner or Prospector)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Orientation",
+                        "Specialist Weapon group (Two-handed)",
+                        "Very Resilient or Warrior Born"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Great Weapon (Two-handed Pick)",
+                        "Leather Jack",
+                        "Pick",
+                        "Spade",
+                        "Storm Lantern",
+                        "Lamp Oil"});
+                    break;
+                case "Noble":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Blather or Command",
+                        "Common Knowledge (the Empire)",
+                        "Consume Alcohol or Performer (Musician)",
+                        "Charm",
+                        "Gamble or Gossip",
+                        "Read/Write",
+                        "Ride"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Etiquette",
+                        "Luck or Public Speaking",
+                        "Savvy or Specialist Weapon (Fencing)",
+                        "Schemer or Specialist Weapon (Parrying)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Foil",
+                        "Main Gauche",
+                        "Noble's Garb",
+                        "Riding Horse w/ Saddle and Harness",
+                        "Jewellery worth 6d10 GC"});
+                    careerGold = r.Next(1, 10);
+                    break;
+                case "Norse Berserker":
+                    txWeaponSkilAdvance.Text = "15";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (Norsca)",
+                        "Consume Alcohol",
+                        "Intimidate",
+                        "Performer (Storyteller)",
+                        "Speak Language (Norse)",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Frenzy",
+                        "Menacing",
+                        "Quick Draw",
+                        "Specialist Weapon Group (Two-Handed)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jerkin",
+                        "Bottle of Spirits",
+                        "Great Weapon or Shield"});
+                    break;
+                case "Outaw":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care or Common Knowledge (the Empire)",
+                        "Concealment",
+                        "Dodge Blow",
+                        "Drive or Ride",
+                        "Gossip or Secret Signs (Thief)",
+                        "Perception",
+                        "Scalre Sheer Surface",
+                        "Set Trap or Swim",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Rover or Streetwise",
+                        "Sharpshooter or Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Bow w/ 10 Arrows",
+                        "Leather Jerkin",
+                        "Shield"});
+                    break;
+                case "Outrider":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Follow Trail",
+                        "Navigation",
+                        "Outdoor Survival",
+                        "Perception",
+                        "Ride",
+                        "Search",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Very Strong",
+                        "Orientation",
+                        "Specialist Weapon Group (Entangling)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Bow or Crossbow w/ 10 Arrows or Bolts",
+                        "Net",
+                        "Whip or Laso",
+                        "Lether Jack",
+                        "Shield",
+                        "10 Yards of Rope",
+                        "Riding Horse 1/ Saddle & Harness"});
+                    break;
+                case "Peasant":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care or Charm",
+                        "Animal Training or Swim",
+                        "Charm Animal or Trade (Cook)",
+                        "Concealment",
+                        "Drive or Trade (Bowyer)",
+                        "Gamble or Performer (Dancer or Singer)",
+                        "Outdoor Survival or Trade (Farmer)",
+                        "Row or Set Trap",
+                        "Scale Sheer Surface or Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Hardy or Rover",
+                        "Flee or Specialist Weapon Group (Sling)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Sling or Quarter Staff",
+                        "Leather Flask"});
+                    break;
+                case "Pit Figher":
+                    txWeaponSkilAdvance.Text = "15";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Dodge Blow",
+                        "Intimidate"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disarm or Wrestling",
+                        "Quick Draw or Strike to Injure",
+                        "Specialist Weapon Group (Flail)",
+                        "Specialist Weapon Group (Parrying)",
+                        "Specialist Weapon Group (Two-Handed)",
+                        "Strike Mighty Blow",
+                        "Very Strong or Strong-minded"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Flail or Great Weapon",
+                        "Knuckle-duster",
+                        "Shield or Buckler",
+                        "Mail Shirt and Leather Jack"});
+                    break;
+                case "Protagonist":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Dodge Blow",
+                        "Gossip or Haggle",
+                        "Intimidate",
+                        "Ride"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disarm or Quick Draw",
+                        "Menacing or Suave",
+                        "Street Fighting",
+                        "Strike Mighty Blow",
+                        "Strike to Injure",
+                        "Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Mail Shirt",
+                        "Leather Jack",
+                        "Shield",
+                        "Riding Hores w/ Saddle and Harness"});
+                    break;
+                case "Rat Catcher":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Animal Trainer",
+                        "Concealment",
+                        "Perception",
+                        "Search",
+                        "Set Trap",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Resistance to Disease",
+                        "Resistance to Poison",
+                        "Specialist Weapon Group (Sling)",
+                        "Tunnel Rat"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Sling w/ Ammo",
+                        "4 Animal Traps",
+                        "Pole with 1d10 dead rats",
+                        "Small but Vicious Dog"});
+                    break;
+                case "Roadwarden":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care",
+                        "Common Knowledge (the Empire) or Gossip",
+                        "Drive",
+                        "Follow Trail or Secret Signs (Scout)",
+                        "Navigation",
+                        "Outdoor Survival",
+                        "Perception",
+                        "Ride",
+                        "Search"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Quick Draw or Rapid Reload",
+                        "Specialist Weapons Group (Gunpowder)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Pistol w/ 10 Shot",
+                        "Mail Shirt",
+                        "Leather Jack",
+                        "Shield",
+                        "10 Yards of Rope",
+                        "Light Warhorse w/ Saddle & Harness (Pony for Halfling)"});
+                    break;
+                case "Rogue":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Blather",
+                        "Charm",
+                        "Evaluate",
+                        "Gamble or Secret Signs (Thief)",
+                        "Gossip or Haggle",
+                        "Perception",
+                        "Performer (Actor or Storyteller)",
+                        "Search or Secret Language (Thieve's Tongue)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Flee! or Streetwise",
+                        "Luck or Sixth Sense",
+                        "Public Speaking"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "One set of Best Craftsmanship Clothing",
+                        "or Dice",
+                        "o Deck of Cards"});
+                    careerGold = r.Next(1, 10);
+                    break;
+                case "Runebearer":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "1";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Dodge Blow",
+                        "Navigation",
+                        "Outdoor Survival",
+                        "Secret Signs (Scout)",
+                        "Perception",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Flee!",
+                        "Fleet Footed or Sixth Sense",
+                        "Orientation",
+                        "Rapid Reload",
+                        "Very Resilient or Very Strong"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Crossbow w/ 10 Bolts",
+                        "Leather Jerkin",
+                        "Healing Draught",
+                        "Lucky Charm"});
+                    break;
+                case "Scribe":
+                    txWeaponSkilAdvance.Text = "";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (any one)",
+                        "Common Knowledge (the Empire) or Gossip",
+                        "Perecption",
+                        "Read/Write",
+                        "Secret Language (Guild Tongue)",
+                        "Speak Language (Breaton)",
+                        "Speak Language (Classical)",
+                        "Speak Language (Tilean)",
+                        "Trade (Caligrapher)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Linguistics"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Knife",
+                        "A Pair of Cangles",
+                        "Wax",
+                        "5 Matches",
+                        "Illuminated Book",
+                        "Writing Kit"});
+                    break;
+                case "Seaman":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (Bretonnia, Norsca, Tilea, or the Wasteland)",
+                        "Consume Alcohol or Perception",
+                        "Dodge Blow",
+                        "Row",
+                        "Sail",
+                        "Scale Sheer Surface",
+                        "Speak Language (Breaton, Norse, or Tilean)",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Hardy or Street Fighting",
+                        "Seasoned Traveller",
+                        "Strike Mighty Blow or Swashbuckler"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jerkin",
+                        "Bottle of Poor Craftsmanship Spirits"});
+                    break;
+                case "Servant":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animale Care or Trade (Cook)",
+                        "Blather",
+                        "Dodge Blow",
+                        "Drive or Search",
+                        "Evaluate or Haggle",
+                        "Gossip",
+                        "Perception",
+                        "Read/Write or Sleight of Hand"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Acute Hearing or Flee!",
+                        "Etiquette or Hardy",
+                        "Lightning Reflexes or Very Resilient"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "One set of Good Crasftsmanship Clothing",
+                        "Pewter Tankard",
+                        "Tinderbox",
+                        "Storm Lantern",
+                        "Lamp Oil"});
+                    break;
+                case "Shieldbreaker":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Dodge Blow",
+                        "Navigation",
+                        "Perception",
+                        "Scale Sheer Surface",
+                        "Shadowing"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Acute Hearing or Coolheaded",
+                        "Orientation",
+                        "Strike Mighty Blow",
+                        "Strike to Injure",
+                        "Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Crossbow w/ 10 bolts",
+                        "Mail Coat",
+                        "Leather Jack",
+                        "Leather Leggings",
+                        "Shield",
+                        "Grappling Hook",
+                        "10 Yards of Rope",
+                        "Water Skin"});
+                    break;
+                case "Smuggler":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Drive",
+                        "Evaluate",
+                        "Gossip or Secret Language (Thieves' Tongue)",
+                        "Haggle",
+                        "Speak Language (Breton or Kislevian)",
+                        "or Secret Signs (Thief)",
+                        "Swim"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Dealmaker or Streetwise"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jack",
+                        "2 Torches",
+                        "Draft Horse and Cart o Rowing Boat"});
+                    break;
+                case "Soldier":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care or Heal",
+                        "Common Knowledge (the Empire) or Perception",
+                        "Dodge Blow",
+                        "Drive or Ride",
+                        "Gamble or Gossip",
+                        "Intimidate"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disarm or Quick Draw",
+                        "Sharpshooter or Strike Mighty Blow",
+                        "Specialist Weapon Group (Gunpowder or Two-handed)",
+                        "Strike to Injure or Rapid Reload",
+                        "Strike to Stun or Mighty Shoot"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Great Weapon (Halberd) or Firearm w/ 10 Shot",
+                        "Shield",
+                        "Full Leather Armor",
+                        "Uniform"});
+                    break;
+                case "Squire":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (Genalogy/Heraldry)",
+                        "or Common Knowledge (Bretonnian)",
+                        "Animal Care",
+                        "Animal Training",
+                        "Charm or Gossip",
+                        "Dodge Blow",
+                        "Ride",
+                        "Speak Language (Breton)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Etiquette",
+                        "Specialist Weapon Group (Cavalry)",
+                        "Strike Mighty Blow"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Demilance",
+                        "Mail Shirt",
+                        "Mail Coif",
+                        "Leather Jack",
+                        "Shield",
+                        "Horse w/ Saddle & Harness"});
+                    break;
+                case "Student":
+                    txWeaponSkilAdvance.Text = "";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (any one)",
+                        "Academic Knowledge (any one) or Gossip",
+                        "Charm or Consume Alcohol",
+                        "Heal or Search",
+                        "Perception",
+                        "Read/Write",
+                        "Speak Language (Classical)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Etiquette or Linguistics",
+                        "Savvy or Suave",
+                        "Seasoned Traveller or Super Numerate"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "2 Text Books corresponding to Knowledge Skills",
+                        "Writing Kit"});
+                    break;
+                case "Thief":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "15";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Charm or Scale Sheer Surface",
+                        "Concealment",
+                        "Evaluate or Disguise",
+                        "Gamble or Pick Lock",
+                        "Perception",
+                        "Read/Write or Slight of Hand",
+                        "Search",
+                        "Secret Language (Thieve's Tongue)",
+                        "or Secret Signs (Thief)",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Alley Cat or Streatwise",
+                        "Super Numerate or Trapfinder"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jerkin",
+                        "Sack",
+                        "Lock Picks",
+                        "10 Yards of Rope"});
+                    break;
+                case "Thug":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Consume Alcohol",
+                        "Dodge Blow",
+                        "Gamble",
+                        "Intimidate",
+                        "Secret Language (Thieves' Tongue)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Lightning Reflexes",
+                        "Disarm",
+                        "Resistance to Poison or Quick Draw",
+                        "Strike to Injure or Wrestling",
+                        "Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Knuckle-dusters",
+                        "Mail Shirt",
+                        "Leather Jerkin"});
+                    break;
+                case "Toll Keeper":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Dodge Blow",
+                        "Evaluate",
+                        "Gossip or Haggle",
+                        "Perception",
+                        "Read/Write",
+                        "Search",
+                        "Speak Language (Breton, Kislevian, or Tilean)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Lightning Reflexes or Marksman"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Chest",
+                        "Crossbow w/ 10 Bolts",
+                        "Mail Shirt",
+                        "Leather Jerkin",
+                        "Shield"});
+                    careerGold=r.Next(1,10);
+                    break;
+                case "Tomb Robber":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (the Empire)",
+                        "or Secret Signs (Thief)",
+                        "Concealment or Outdoor Survival",
+                        "Evaluate",
+                        "Perception",
+                        "Pick Lock or Silent Move",
+                        "Read/Write",
+                        "Scale Sheer Surface",
+                        "Search",
+                        "Speak Language (Classical, Khazalid, or Eltharin)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Luck or Sixth Sense",
+                        "Trapfinder or Tunnel Rat"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jack",
+                        "Crowbar",
+                        "Lantern",
+                        "Lamp Oil",
+                        "10 Yards of Rope",
+                        "2 Sacks"});
+                    break;
+                case "Tradesman":
+                    txWeaponSkilAdvance.Text = "";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Animal Care or Gossip",
+                        "Drive",
+                        "Haggle",
+                        "Evaluate",
+                        "Perceptio",
+                        "Read/Write",
+                        "Secret Language (Guild Tongue)",
+                        "Trade (any Two)"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Dealmaker or Savy"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jerkin"});
+                    careerGold = r.Next(1,10);
+                    break;
+                case "Troll Slayer":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "5";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "1";
+                    txWoundsAdvance.Text = "3";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Consume Alcohol",
+                        "Dodge Blow",
+                        "Intimidate"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Disarm or Quick Draw",
+                        "Hardy",
+                        "Lightning Reflexes or Very Resilient",
+                        "Specialist Weapon Group (Two-handed)",
+                        "Street Fighter",
+                        "Strike Mighty Blow"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Great Weapon",
+                        "Leather Jerkin",
+                        "One Bottle of Poor Craftsmaship Spirits"});
+                    break;
+                case "Vagabond":
+                    txWeaponSkilAdvance.Text = "5";
+                    txBalisticSkilAdvance.Text = "10";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "5";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Common Knowledge (Bretonnia, Estalia, Kislev, or Tilea)",
+                        "Gossip or Secret Language (Ranger Tongue or Thieves' Tongue)",
+                        "Haggle or Swim",
+                        "Heal or Perception",
+                        "Navigation",
+                        "Outdoor Survival",
+                        "Performer (Dancer, Singer, or Storyteller)",
+                        "or Secret Signs (Ranger or Thief)",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Fleet Footed or Rover",
+                        "Marksman or Orientation",
+                        "Seasoned Traveller"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Back Pack",
+                        "Rations (1 week)",
+                        "Tent",
+                        "Water Skin"});
+                    break;
+                case "Valet":
+                    txWeaponSkilAdvance.Text = "";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "10";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "5";
+                    txFellowAdvance.Text = "10";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (Genalogy/Heraldry)",
+                        "Blather",
+                        "Evaluate",
+                        "Gossip or Speak Language (Breaton)",
+                        "Haggle",
+                        "Perception",
+                        "Read/Write",
+                        "Search"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Suave",
+                        "Dealmaker or Seasoned Traveller",
+                        "Etiquette"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Cologne",
+                        "Purse",
+                        "2 sets of Best Craftsmanship Clothing",
+                        "Uniform"});
+                    break;
+                case "Watchman":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "5";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "10";
+                    txWillAdvance.Text = "";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (Law)",
+                        "Dodge Blow",
+                        "Follow Trail",
+                        "Gossip",
+                        "Intimidate",
+                        "Perception",
+                        "Search"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Savvy",
+                        "Disarm or Street Fighting",
+                        "Strike Mighty Blow",
+                        "Strike to Stun"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Leather Jack",
+                        "Lantern and Pole",
+                        "Lamp Oil",
+                        "Uniform"});
+                    break;
+                case "Woodsman":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "10";
+                    txToughnesAdvance.Text = "";
+                    txAgilityAdvance.Text = "5";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "3";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Concealment",
+                        "Follow Trail or Set Trap",
+                        "Perception",
+                        "Scale Sheer Surface",
+                        "Secret Language (Ranger Tongue)",
+                        "Secret Signs (Ranger)",
+                        "Silent Move"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Fleet Footed or Very Resilient",
+                        "Rover",
+                        "Specialist Weapon Group (Two-handed)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Great Weapon (Two-handed Axe)",
+                        "Leather Jack",
+                        "Antitoxin Kit"});
+                    break;
+                case "Zealot":
+                    txWeaponSkilAdvance.Text = "10";
+                    txBalisticSkilAdvance.Text = "";
+                    txStrentghAdvance.Text = "5";
+                    txToughnesAdvance.Text = "10";
+                    txAgilityAdvance.Text = "";
+                    txIntAdvance.Text = "";
+                    txWillAdvance.Text = "10";
+                    txFellowAdvance.Text = "5";
+                    txAttacksAdvance.Text = "";
+                    txWoundsAdvance.Text = "2";
+                    txStrBonusAdvance.Text = "";
+                    txToughBonusAdvance.Text = "";
+                    txMoveAdvance.Text = "";
+                    txMagicAdvance.Text = "";
+                    txInsanityAdvance.Text = "";
+                    txFateAdvance.Text = "";
+
+                    libSkills.Items.AddRange(new object[] {
+                        "Academic Knowledge (Theology)",
+                        "Charm",
+                        "Common Knowledge (the Empire)",
+                        "Intimidate",
+                        "Read/Write"});
+                    libTalents.Items.AddRange(new object[] {
+                        "Coolheaded or Very Strong",
+                        "Heardy or Suave",
+                        "Public Speaking",
+                        "Specialist Weapon Group (Flail)"});
+                    libEquipment.Items.AddRange(new object[]{
+                        "Flail or Morning Star",
+                        "Leather Jack",
+                        "Bottle of Good Craftsmanship Spirits"});
                     break;
             }
 
